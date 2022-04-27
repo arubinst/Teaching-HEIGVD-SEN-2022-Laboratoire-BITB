@@ -58,7 +58,7 @@ Ceci crée un container basé sur l’image ```nginx``` qui utilise le contenu d
 
 ## Browser In The Browser Attack
 
-Dans un répertoire de votre choix, clonez le projet BITB disponible sur github. Par exemple :
+Dans un répertoire de votre choix, clonez [le projet BITB disponible sur github](https://github.com/mrd0x/BITB). Par exemple :
 
 ```bash
 git clone https://github.com/mrd0x/BITB.git
