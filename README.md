@@ -76,6 +76,9 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+![mon BITB](images/BITB.png)
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,15 +106,25 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+![Google accounts](images/google_accounts.png)
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![clone Google accounts](images/clone_google_accounts.png)
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
 Réponse :
+- XX-TITLE-XX :         Connexion : comptes Google - Google Chrome
+- XX-DOMAIN-NAME-XX :   accounts.google.com
+- XX-DOMAIN-PATH-XX :   /signin/v2/identifier?faa=1&rip=1&continue=https%3A%2F%2Faccounts.google.com%2Fgsi%2Fselect%3Fclient_id%3D49625052041-kgt0hghf445lmcmhijv46b715m2mpbct.apps.googleusercontent.com%26ux_mode%3Dpopup%26ui_mode%3Dcard%26as%3DVfO4IfHTCdzc86cCSpVChA%26channel_id%3D2ec7fc14200e100f976f3eb01f9f2c313143520fc0bed417da9060a7f981585a%26origin%3Dhttps%3A%2F%2Ftwitter.com&flowName=GlifWebSignIn&flowEntry=ServiceLogin
+- XX-PHISHING-LINK-XX : test/index.html
 ```
 
 ---
@@ -119,7 +132,7 @@ Réponse :
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
 ```
-Réponse :
+Réponse : Oui, majoritairement la taille de la fenêtre qui n'est pas la même que pour la version clonnée (chose auquel il est facile de remédier). Outre ceci, l'original est la copie son identiques.
 ```
 
 ---
