@@ -76,6 +76,9 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+![image-20220427231410214](images/image-20220427231410214.png)
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,38 +106,92 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+![image-20220428011811091](images/image-20220428011811091.png)
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![image-20220428013526650](images/image-20220428013526650.png)
+
+![](images/bitb-demo.gif)
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
-```
-Réponse :
-```
+| Variable            | Contenu                                                      | Explication                                                  |
+| ------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| XX-TITLE-XX         | `Sign-in - Google accounts`                                  | C'est le contenu de la balise `title`, qui définit le titre de l'onglet de la fausse fenêtre |
+| XX-DOMAIN-NAME-XX   | `https://accounts.google.com`                                | Le nom de domaine de la fenêtre de login                     |
+| XX-DOMAIN-PATH-XX   | `/o/oauth2/auth/identifier?redirect_uri=storagerelay%3A%2F%2Fhttps`... | La fin de l'URL du login, qui est grisée dans la fausse fenêtre. <br />J'ai pris soin de supprimer les tokens de la requête que j'ai prise pour générer le clone de google. |
+| logo.svg            | Remplacé par le logo de Google                               | Afin de donner de plus de crédibilité au BTIB                |
+| XX-PHISHING-LINK-XX | google-login.html                                            | Le chemin du fichier de faux login Google. À noter que les liens vers des domaines externes sont bloqués par la sécurité du navigateur (je ne me suis pas renseigné plus mais c'est le cas sous Firefox). |
+
+
 
 ---
 
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
-```
-Réponse :
-```
+Au niveau purement visuel, la seule différence est la bordure de la fenêtre BTIB. Je n'avais pas l'envie de jouer avec le CSS pour répliquer parfaitement Windows.
+Mais surtout, c'est une barre de titre différente car elle est dépendante de l'OS et je suis sous Linux, qui n'a pas de template fourni par l'auteur. Pour corriger cela, il faudrait créer un template générique pour Linux (Ubuntu avec Gnome, pour rester dans les plus utilisés) et faire un script JS plus avancé qui détecte le navigateur de la victime (avec son User-Agent par exemple) et modifier la décoration de la fenêtre dynamiquement. 
+
+Au niveau des fonctionnalités on peut évidemment noter que le formulaire de login ne fonctionne pas et que le bouton de connexion "Apple" envoie vers un lien qui n'est pas valide.
+
+Le formulaire BTIB ne fonctionne par contre pas vraiment et on ne peut pas entrer de mot de passe après avoir validé le nom d'utilisateur. Cela serait faisable si on modifiait le code de la page.
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
-```
-Réponse :
-```
+**Clonage de Reddit**
+
+J'ai d'abord essayé un petit outil du nom de Goclone, que j'ai trouvé sur GitHub: https://github.com/imthaghost/goclone
+
+Il est rapide et fonctionne bien pour les sites simples, il a un problème: il envoit trop de requêtes et se fait bloquer par les protections anti DDOS et anti bot des sites (Cloudflare par exemple). Après avoir passé du temps à chercher un site qui soit compatible avec cet outil, j'ai abandonné et trouvé un autre outil qui faisait parfaitement l'affaire.
+
+L'outil en question est disponible en ligne à cette adresse : https://tool.minhclear.net/clonetemplate/
+
+**Mise en place du BTIB**
+
+Pour commencer, j'ai enlevé du code les appels à l'API reddit et les scripts qui n'étaient pas utiles pour la fausse page.
+
+J'ai ensuite intégré les parties utiles du template dans la page clonée, c'est-à-dire le link CSS, la balise HTML de la fenêtre "window" ainsi que l'appel du script du BTIB.
+
+Puis j'ai modifié les variables comme expliqué plus haut.
+
+J'ai ensuite dû faire quelques modifications pour avoir une fenêtre BTIB propre et fonctionnelle:
+
+1. Cacher la fenêtre au chargement de la page en lui donnant par défaut le style `display:none`
+
+2. Afficher la fenêtre lorsqu'on appuie sur le bouton de connexion via Google. Dans la div, j'ai ajouté l'attribut `onclick` avec du Javascript qui modifie le style via le DOM.
+
+   ![image-20220428022237181](images/image-20220428022237181.png)
+
+3. Le contenu de la page commençait après la fenêtre BTIB, et non au sommet de la page. J'ai donc ajouté le CSS nécessaire: `position:absolute;top:0`
+
+4. Lorsque la fenêtre était affichée, elle se mélangeait avec les composants de la page normale. J'ai mis sa position relative et permis la superposition avec le  `z-index` qui permet de définir des priorités sur les couches d'éléments.
+
+5. Modifier l'emplacement de départ de la fenêtre
+
+**Clonage du formulaire Google**
+
+Pour cloner le formulaire de connexion Google, les outils que j'avais utilisé auparavant ne fonctionnaient pas avec l'URL de la page, j'ai donc utilisé la manière simple: Ctrl+S sur le navigateur.
+
+Cette solution a fonctionné étonamment bien. J'ai donc pu sauvegarder la page, qui n'a pas de dépendance JS ni CSS et l'intégrer à la fenêtre BTIB.
+
+Le résultat est identique à la page Google normale, mais ne fonctionne pas car il y a normalement un script qui va récupérer des tokens et faire des vérifications avant de pouvoir rentrer son mot de passe.
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
-```
-Conclusions :
-```
+Cette attaque Browser In The Browser est très puissante. Si elle est suffisamment bien implémentée, il est difficile de s'apercevoir qu'on est face à une fausse fenêtre de browser.
+
+Je pense que les templates de l'auteur de l'attaque ne sont pas encore assez évolués. Par exemple, ma barre de titre "Windows"avait des soucis de CSS, ou avait des curseurs étranges. Ce sont des détails, mais des détails qui font perdre crédibilité face à des victimes attentives.
+
+Cependant, un attaquant suffisamment motivé pourra forcément améliorer cela et ajouter par exemple des fonctionnalités pour s'adapter au browser et à l'OS de la victime, ou encore ajouter les fonctionnalités manquantes, comme la possibilité de redimensionner la fenêtre.
+
 ---
 
 ## Echeance
