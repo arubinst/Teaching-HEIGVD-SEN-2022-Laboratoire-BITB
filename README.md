@@ -103,15 +103,31 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+J'ai decidé de clonner la login page de Facebook
+
+
+![FB](images/fb.png)
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![iframe](images/SEN_iframe.png)
+
+On peut voir que j'ai laissé le header qui informe de l'application du login (JasonWatmore.com Login Example.) pour cette example.
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
 Réponse :
+
+XX-TITLE-XX - Facebook
+XX-DOMAIN-NAME-XX - facebook.com
+XX-DOMAIN-PATH-XX - /login.php?skip_api_login=1&api_key=314930319788683&kid_directed_site=0&app_id=314930319788683&signed_next=1...
+XX-PHISHING-LINK-XX - /frame/index.html (Ma page de phishing)
+
 ```
 
 ---
@@ -119,21 +135,27 @@ Réponse :
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
 ```
-Réponse :
+Réponse : Non, La seule différence est la barre d'URL qui ne correspond pas car je suis sous Linux mais sinon il n'y a pas de différence remarquable sans utiliser là de console.
+
 ```
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
-Réponse :
+Réponse : Comme la page originale est dynamique et charge via du JS, j'ai dû charger la page puis copier les parties intéressantes du HTML depuis mon browser dans un nouveau fichier et copier les snippets CSS qui correspondent.
 ```
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions :
+Conclusions : Cette attaque est redoutable car tous les signes visuels (cadenas, URL) pointe vers une page légitime. 
+
+Un "red flag" est que le password manager ne reconnaissant pas le domaine comme Facebook mais comme l'hôte ne va pas donner à l'utilisateur son password Facebook.
+
+Pour se protéger contre ce type d'attaque il faut s'habituer à drag la fenêtre pop-up en dehors de celle browser.
+
 ```
 ---
 
