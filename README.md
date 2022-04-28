@@ -76,7 +76,14 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+(Je suis sous linux mais j'utilise le template windows). 
+
+![image-20220428113251749](figures/image-20220428113251749.png)
+
 ---
+
+
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
 
@@ -102,39 +109,60 @@ Votre travail pour ce TP sera limité à afficher la fenêtre avec le formulaire
 Evidement, ce travail peut être combiné avec des outils comme [Gophish](https://github.com/gophish/gophish/releases), ce qui risque de produire des résultats redoutables.
 
 ---
-#### Livrable : Capture d'écran du site légitime que vous avez cloné.
+#### Livrable : 
+
+Je voulais choisir Steam mais ce dernier ne permet pas de se connecter à l'aide de Google donc j'ai pris Reddit car je sais qu'il est possible de s'y connecter ainsi.
+
+![image-20220428113855048](figures/image-20220428113855048.png)
+
 ---
 
-#### Livrable : Capture d'écran de votre version.
+#### Livrable : 
+
+![image-20220428162720170](figures/image-20220428162720170.png)
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
-```
-Réponse :
-```
+- **XX-TITLE-XX** : *Sign-in - Google accounts* Titre de la page de pop-up
+- **XX-DOMAIN-NAME-XX**: https://accounts.google.com* Le nom de domaine de la fenetre de pop-up
+- **XX-DOMAIN-PATH-XX**: */o/oauth2/auth/*... Le path à afficher à la suite du nom de domain.
+- **XX-PHISHING-LINK-XX**: *google.html* Le chemin vers notre page de phising. 
 
 ---
 
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
 ```
-Réponse :
+Réponse : Il y a un problème d'affiche lorsque l'on passe sur les options d'onglet du pop-up que je n'ai pas pu régler. Il est également impossible de changer la langue de l'onglet. De plus, le style visuel n'est pas valide pour mon OS car sous Linux et le style visuel ne s'adapte pas selon le mode de l'utilisateur (light/dark mode).
+
+On peut noter que aucun des liens ne fonctionnent et que l'on ne peut pas accéder à la partie du formulaire pour entrer un mot de passe.
 ```
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
-```
-Réponse :
-```
+Pour cloner le site web, j'ai utilisé [ce site](https://tool.minhclear.net/clonetemplate/) que j'ai trouvé en faisant une recherche google qui retourne la page web et les scripts de manière ordonnée. J'ai ensuite enlever les parties inutiles de la page comme les scripts de tracking et la gestion du 2FA pour simplifier la lecture et la navigation du code.
+Pour cloner le formulaire de mot de passe, j'ai télécharger la page depuis mon navigateur.
+
+
+
+J'ai ensuite integré le code de bitb dans la page de reddit. Cela n'a pas du tout fonctionné out-of-the-box car il n'y avait pas de page supplémentaire mais l'onglet est inséré en haut de la page et decale le reste de la page.
+
+Pour fixer cela, j'ai commencé par afficher la page uniquement lorsque l'on appuie sur le bouton pour se connecter. Pour ce faire, j'ai mis l'onglet en `display:none` et ai ajouté un event handler sur le bouton google pour afficher la page quand on clique dessus.
+
+J'ai ensuite forcé la page à apparaitre comme un pop-up en mettant sa position relative et en forcant son z-index pour l'afficher au premier plan et en mettant la page de page en position absolue. Pour coller à la réalité, j'ai affiché le pop-up au milieu de la page.
+
+J'ai également dû modifier les symboles pour agrandir la fenêtre et la fermer qui n'étaient pas résolus correctement.
+
+Finalement, j'ai modifié le logo afin d'y mettre le logo Google.
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
-```
-Conclusions :
-```
+Je connaissais déjà cette attaque  et avait même vu un exemple permettant même bypasser le 2FA si bien [implémenté](https://youtu.be/NWtm4X6L_Cs?t=485). Cela étant, c'est une attaque très puissante et très intéressante  qui peut même tromper un utilisateur averti si la fausse page est suffisamment bien implémenté.
+
 ---
 
 ## Echeance
