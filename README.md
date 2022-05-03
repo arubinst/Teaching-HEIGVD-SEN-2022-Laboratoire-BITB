@@ -139,14 +139,15 @@ Réponse : Oui, majoritairement la taille de la fenêtre qui n'est pas la même 
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
-Réponse :
+Réponse : J'ai utilisé un vieux logiciel qui est toujours aussi bon même après plusieurs années sans mises à jour, j'ai nommé : HTTrack website copier.
+Pour un clonnage rapide, il n'y a rien de plus simple. On démarre le logiciel, on indique où enregistrer les fichier puis quel est l'url à cloner et voilà, le site est cloné !
 ```
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions :
+Conclusions : Je me rends bien compte de la simplicité de reproduction d'un environnement familier à un utilisateur, même avertis, permettant la subtilisation d'informations de connexions par exemple. Comme quoi, m'eme en faisant attention, on peut se faire avoir.
 ```
 ---
 
