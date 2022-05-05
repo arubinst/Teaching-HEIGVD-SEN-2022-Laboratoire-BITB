@@ -1,0 +1,12 @@
+HTTrack3.49-2+htsswf+htsjava launched on Thu, 28 Apr 2022 11:23:04 at http://accounts.google.com/signin/v2/identifier?faa=1&rip=1&as=58B6iQeUIF6VnP%2FqyESaqA&continue=https%3A%2F%2Faccounts.google.com%2Fgsi%2Fselect%3Fclient_id%3D49625052041-kgt0hghf445lmcmhijv46b715m2mpbct.apps.googleusercontent.com%26ux_mode%3Dpopup%26ui_mode%3Dcard%26channel_id%3D721f7cb7a7b04e9fc279710da6baae9ea673853035a46c451ee8e02f7bd7c795%26origin%3Dhttps%253A%252F%252Ftwitter.com%26as%3D58B6iQeUIF6VnP%252FqyESaqA&hl=fr&flowName=GlifWebSignIn&flowEntry=AddSession +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://accounts.google.com/signin/v2/identifier?faa=1&rip=1&as=58B6iQeUIF6VnP%2FqyESaqA&continue=https%3A%2F%2Faccounts.google.com%2Fgsi%2Fselect%3Fclient_id%3D49625052041-kgt0hghf445lmcmhijv46b715m2mpbct.apps.googleusercontent.com%26ux_mode%3Dpopup%26ui_mode%3Dcard%26channel_id%3D721f7cb7a7b04e9fc279710da6baae9ea673853035a46c451ee8e02f7bd7c795%26origin%3Dhttps%253A%252F%252Ftwitter.com%26as%3D58B6iQeUIF6VnP%252FqyESaqA&hl=fr&flowName=GlifWebSignIn&flowEntry=AddSession -O1 "C:\Users\OmegaPi\Desktop\test\test" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+11:23:06	Warning: 	Link https://accounts.google.com/signin/v2/identifier?faa=1&rip=1&as=58B6iQeUIF6VnP%2FqyESaqA&continue=https%3A%2F%2Faccounts.google.com%2Fgsi%2Fselect%3Fclient_id%3D49625052041-kgt0hghf445lmcmhijv46b715m2mpbct.apps.googleusercontent.com%26ux_mode%3Dpopup%26ui_mode%3Dcard%26channel_id%3D721f7cb7a7b04e9fc279710da6baae9ea673853035a46c451ee8e02f7bd7c795%26origin%3Dhttps%253A%252F%252Ftwitter.com%26as%3D58B6iQeUIF6VnP%252FqyESaqA&hl=fr&flowName=GlifWebSignIn&flowEntry=AddSession not scanned (follow robots meta tag)
+
+HTTrack Website Copier/3.49-2 mirror complete in 5 seconds : 2 links scanned, 1 files written (1870076 bytes overall) [542164 bytes received at 108432 bytes/sec], 1870860 bytes transferred using HTTP compression in 3 files, ratio 27%
+(No errors, 1 warnings, 0 messages)
