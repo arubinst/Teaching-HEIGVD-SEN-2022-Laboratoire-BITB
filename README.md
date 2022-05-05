@@ -76,6 +76,9 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+![image-20220428113133141](images/image-20220428113133141.png)
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,15 +106,30 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+![image-20220505181133780](images/image-20220505181133780.png)
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![image-20220505180856462](images/image-20220505180856462.png)
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
-Réponse :
+Réponse : 
+./logo.svg remplacé par ./favicon.ico qui est l'icône de Google
+
+XX-TITLE-XX remplacé par Connexion : comptes Google – Google Chrome (car utilisation du template Google Chrome)
+
+XX-DOMAIN-NAME-XX remplacé par: accounts.google.com
+
+XX-DOMAIN-PATH-XX remplacé par: /o/oauth2/auth/identifierredirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.deezer.com%3Fid%3Dauth96888&response_type=permissionid_token&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profilehttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.emailhttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuser.emails.readhttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuser.birthday.read&openid.realm&include_granted_scopes=true&client_id=630457285321-d5nmkpnjktjoeh426nvdu40rch1b1qe0.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fwww.deezer.com&fetch_basic_profile=false&gsiwebsdk=2&flowName=GeneralOAuthFlow
+
+XX-PHISHING-LINK-XX remplacé phishing-link par ../Connexion_comptes_Google.html (ce fichier contient le clone de la fenêtre d'authentification de Google)
 ```
 
 ---
@@ -120,13 +138,24 @@ Réponse :
 
 ```
 Réponse :
+Oui. Comme je travaille sur Linux, la fenêtre d'authentification n'est pas la même car j'ai utilisé le template Dark Mode de Windows sur Google Chrome.
+J'ai retenté l'attaque directement sur Windows (voir capture d'écran ci-dessous) et les deux fenêtres d'authentification se ressemblent beaucoup plus. Il y a juste un souci concernant la police d'écriture de certains mots qui ne se trouvent pas en gras et l'icône SSL qui est trop petit (alors que je n'ai pas ce souci sur Linux).
+Sur Linux, l'icône de traduction à la fin du lien ne s'affiche pas sur le clone tandis que sur Windows c'est l'icône avec l'oeil barré qui ne s'affiche pas.
+La dernière différence restante est la couleur du Dark Mode du template qui est trop noire dans la barre de titre par rapport à la couleur réelle du Dark Mode de Google Chrome.
+
+De plus, le site originel comporte les boutons "Télécharger dans l'App Store" et "Disponible sur Google Play" qui ne se retrouvent pas sur mon clone lorsque je l'ouvre sur le serveur car ils sont générés dynamiquement.
 ```
+
+![image-20220505154505864](images/image-20220505154505864.png)
+
+La capture d'écran ci-dessus a été réalisée sur Windows. À Gauche se trouve la fenêtre d'authentification réelle et à droite la fenêtre d'authentification clonée.
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
-Réponse :
+Réponse : 
+J'ai commencé par cloner le site de Deezer. Pour ce faire, j'ai fait un ctrl + s sur la page de login pour l'enregistrer. J'ai ensuite effectué un ctrl + s de la page d'authentification de Google. J'ai regroupé les fichiers de Deezer ainsi que ceux de Google puis ceux du template Dark Mode de Windows pour Google Chrome. J'ai effectué quelques modifications de HTMl et CSS dans l'index.html de la page de login Deezer pour que la fausse fenêtre d'authentification s'affiche sans problème et que les bons liens soient faits.
 ```
 
 ---
@@ -134,6 +163,7 @@ Réponse :
 
 ```
 Conclusions :
+Je ne connaissais pas vraiment cette attaque. Si elle est bien faite, elle peut vraiment être très puissante. Toutefois, elle n'est pas facile à implémenter pour un utilisateur lambda. Il faut tout de même avoir une bonne maîtrise de l'HTML/CSS si l'on veut faire un clone complet ainsi qu'une méthode pour récupérer les identifiants. De plus, il faudrait l'adapter en fonction des OS et des paramètres (dark ou light mode) utilisés.
 ```
 ---
 
