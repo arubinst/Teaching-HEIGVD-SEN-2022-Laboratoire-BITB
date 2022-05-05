@@ -77,7 +77,7 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
 
-![image-20220428113133141](figures/image-20220428113133141.png)
+![image-20220428113133141](images/image-20220428113133141.png)
 
 ---
 
@@ -107,13 +107,13 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
 
-![image-20220505181133780](figures/image-20220505181133780.png)
+![image-20220505181133780](images/image-20220505181133780.png)
 
 ---
 
 #### Livrable : Capture d'écran de votre version.
 
-![image-20220505180856462](figures/image-20220505180856462.png)
+![image-20220505180856462](images/image-20220505180856462.png)
 
 ---
 
@@ -146,7 +146,7 @@ La dernière différence restante est la couleur du Dark Mode du template qui es
 De plus, le site originel comporte les boutons "Télécharger dans l'App Store" et "Disponible sur Google Play" qui ne se retrouvent pas sur mon clone lorsque je l'ouvre sur le serveur car ils sont générés dynamiquement.
 ```
 
-![image-20220505154505864](figures/image-20220505154505864.png)
+![image-20220505154505864](images/image-20220505154505864.png)
 
 La capture d'écran ci-dessus a été réalisée sur Windows. À Gauche se trouve la fenêtre d'authentification réelle et à droite la fenêtre d'authentification clonée.
 
