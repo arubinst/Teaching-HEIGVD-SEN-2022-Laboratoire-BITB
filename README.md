@@ -76,6 +76,9 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+![image-20220428112957151](figures/image-20220428112957151.png)
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,15 +106,26 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+![image-20220504201216570](figures/image-20220504201216570.png)
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![image-20220504203753543](figures/image-20220504203753543.png)
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
 Réponse :
+- XX-TITLE-XX         : Sign in - Google accounts - Google Chrome
+- XX-DOMAIN-NAME-XX   : accounts.google.com
+- XX-DOMAIN-PATH-XX   : /signin/v2/identifier?faa=1&rip=1&continue=https%3A%2F%2Faccounts.google.com%2Fgsi%2Fselect%3Fclient_id%3D990339570472-k6nqn1tpmitg8pui82bfaun3jrpmiuhs.apps.googleusercontent.com%26auto_select%3Dfalse%26ux_mode%3Dpopup%26ui_mode%3Dcard%26context%3Duse%26as%3DypXaQ%252BN2KLwAcQh1MiSIIw%26channel_id%3D93fdc2fdc5e980990e6d3d045cd724b8cab1927b7c315d64311973cd5998bdcd%26origin%3Dhttps%3A%2F%2Fwww.linkedin.com&flowName=GlifWebSignIn&flowEntry=ServiceLogin
+- XX-PHISHING-LINK-XX : google_auth.html (lien de ma fausse fenêtre d'authentification Google)
+J'ai également remplacé le logo Microsoft par le logo Google dans la fenêtre flottante.
 ```
 
 ---
@@ -119,24 +133,24 @@ Réponse :
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
 ```
-Réponse :
+Réponse : On remarque assez facilement que dans la version produite, le haut de la fenêtre Windows ne s'adapte pas au thème Windows de l'utilisateur. On remarque aussi que le symbole d'œil barré et que les «…» à la fin de l'URL ne sont pas présents et que la police est légèrement différente dans la barre de titre. En plus de cela, les boutons permettant de minimiser, agrandir et fermer la fenêtre dépassent légèrement sur la barre d'URL. Pour finir, le bouton pour minimiser la fenêtre ne fonctionne pas, car il n'a pas été implémenté dans le code JS du template. Ces différents problèmes d'affichage et de fonctionnement pourraient être réglés en modifiant le code Web (HTML/CSS/JS) plus rigoureusement, mais cela n'est pas le but du laboratoire.
 ```
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
-Réponse :
+Réponse : Pour le formulaire de Google, j'ai simplement fait un Ctrl+S pour sauvegarder la page et ses composants. Pour ce qui est du formulaire LinkedIn, par contre, j'ai dû d'abord faire un clic droit sur la page et choisir l'option «View Source» m'ouvrant le code HTML dans un autre onglet puis j'ai copié ce code dans une page HTML vierge, car la première méthode ne fonctionnait pas, les liens vers le CSS ne se faisaient pas. Finalement, j'ai dû créer un bouton «Continue with Google» sur le formulaire LinkedIn, car l'original était créé dynamiquement et je ne pouvais pas vraiment le modifier pour que lorsque l'on clique dessus, ma fausse page d'authentification Google apparaisse. J'ai également fait quelques modifications au niveau du CSS pour que la page flottante Google s'intègre correctement dans la page LinkedIn que j'ai copiée et pour que le résultat s'approche le plus possible du site légitime. Il y avait aussi des problèmes d'encodage au niveau des boutons en haut à droite lorsqu'ils étaient affichés sur la page servie par le serveur Web Nginx, il a donc fallu modifier aussi le code HTML en mettant les Altcode (ex. &#0151) des symboles pour qu'ils soient représentés correctement.
 ```
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions :
+Conclusions : Je ne connaissais que très peu cette attaque. Elle doit être assez intéressante à mettre en place entièrement en la combinant avec des outils comme Gophish comme évoqué plus haut, la rendant très efficace. Cependant, pour créer une fausse page, fidèle à la réalité, cela demande de bonnes connaissances en développement Web et je doute qu'il soit possible d'obtenir un résultat visuellement parfait en raison des différentes personnalisations que peuvent utiliser les victimes. De plus, ici, nous avons touché uniquement à la partie visuelle de l'attaque, la partie "backend" doit également être relativement complexe à mettre en place.
 ```
 ---
 
-## Echeance
+## Échéance
 
 Le 12 mai 2022 à 10h25
