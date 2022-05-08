@@ -1,0 +1,357 @@
+
+<!DOCTYPE html><html lang="fr">
+    <head>
+        <title>Salt My Account</title>
+        <meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="icon" type="image/png" sizes="32x32" href="/cas-external/themes/common/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/cas-external/themes/common/favicon-16x16.png"><link rel="manifest" href="/cas-external/themes/common/site.webmanifest"><link rel="mask-icon" href="/cas-external/themes/common/safari-pinned-tab.svg" color="#5bbad5"><link rel="stylesheet" href="/cas-external/themes/common/css/all.min.css" /><link rel="stylesheet" href="/cas-external/themes/fiber/css/thema-salt.min.css" /><script src="/cas-external/themes/common/js/scripts.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /></head>
+    
+    <body class="thema-salt">
+        <div id="container" class="wrapper">
+            <header id="header" role="banner">
+                <svg class="hidden" xmlns="http://www.w3.org/2000/svg">
+                    <symbol id="marker" viewBox="0 0 30 40"> <path d="M22.1,17.1c0-4.2-3.2-7.7-7.1-7.7s-7.1,3.4-7.1,7.7c0,4.2,3.2,7.7,7.1,7.7C18.9,24.8,22,21.3,22.1,17.1
+                        C22.1,17.1,22.1,17.1,22.1,17.1z M14.9,23.3c-3.1,0-5.7-2.8-5.7-6.2c0-3.4,2.5-6.2,5.7-6.2c3.1,0,5.7,2.8,5.7,6.2
+                        C20.6,20.5,18.1,23.2,14.9,23.3z"/><path d="M23.7,38.5h-6.6C20.9,35.2,30,26.6,30,17.4C30,8.3,23.3,1,15,1C6.7,1,0,8.3,0,17.4c0,9,9.1,17.8,12.9,21.1H6.3
+                        c-0.4,0-0.7,0.3-0.7,0.8c0,0.4,0.3,0.8,0.7,0.8h17.4c0.4,0,0.7-0.3,0.7-0.7c0,0,0-0.1,0-0.1C24.4,38.8,24.1,38.5,23.7,38.5z
+                         M1.3,17.4c0-8.2,6.1-14.9,13.6-14.9s13.6,6.7,13.6,14.9c0,9.7-11.3,19.2-13.6,21C12.7,36.5,1.3,26.6,1.3,17.4z"/></symbol>
+                    <symbol id="phone" viewBox="0 0 30 30"> <path d="M6.7,11.5l3.4-3.5c0,0,1.1-1.8-0.7-5.3c-1.9-3.5-7.6-3.8-9-0.2c-3.7,10.9,16.1,30.7,27,27c3.7-1.2,3.3-7.1-0.2-9
+                        C23.8,18.7,22,20,22,20l-3.6,3.3C14.6,20.3,9.7,15.5,6.7,11.5z M9.1,7.3c0.4-1-0.3-3-0.8-3.9C7.1,1,2.6,0.3,1.7,3
+                        C-1.7,12.9,17.2,31.7,27,28.3c2.8-0.9,2-5.4-0.3-6.6c-0.9-0.4-2.8-1.2-3.9-0.7l-4.2,3.9l-0.9-0.7C13.5,21.1,9,16.5,5.7,12.3
+                        l-0.7-0.8L9.1,7.3z"/></symbol>
+                    <symbol id="hide-password" viewBox="0 0 82 65"> <path d="M41,45c6.6,0,12-5.4,12-12c0-1-0.1-2-0.4-3L38,44.6C39,44.9,40,45,41,45z"/><path d="M80.7,32c-3.6-6.3-8.7-11.6-14.6-15.5l-2.9,2.9c5.4,3.4,10,8,13.5,13.6c-5.3,8.7-13.6,15-23.1,18c5.7-4,9.4-10.6,9.4-18
+                        c0-3.8-1-7.5-2.7-10.6l-3,3c1.1,2.3,1.7,4.9,1.7,7.6c0,9.9-8.1,18-18,18c-2.7,0-5.3-0.6-7.6-1.7l-2.5,2.5l-0.5,0.5L27.7,55
+                        c4.3,1.3,8.7,2,13.3,2c16.3,0,31.5-8.8,39.7-23l0.6-1L80.7,32z"/><path d="M19.6,51.6l-10,10l2.8,2.8l60-60l-2.7-2.7l-0.1-0.1l-11,11C53.1,10.2,47.1,9,41,9C24.7,9,9.5,17.8,1.3,32l-0.6,1l0.6,1
+                        C5.6,41.6,12.1,47.6,19.6,51.6z M52.2,19l-4.3,4.3C46,21.8,43.6,21,41,21c-6.6,0-12,5.4-12,12c0,2.6,0.8,5,2.2,6.9l-4.3,4.3
+                        c-2.5-3.1-4-7-4-11.2c0-9.9,8.1-18,18-18C45.2,15,49.1,16.5,52.2,19z M28.4,15C22.7,19,19,25.5,19,33c0,5.3,1.9,10.3,5.1,14.1
+                        l-1.6,1.6c-7-3.5-13-8.8-17.2-15.7C10.7,24.3,18.9,18,28.4,15z"/></symbol>
+                    <symbol id="show-password" viewBox="0 0 82 50"> <path d="M41,13c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S47.6,13,41,13z"/><path d="M41,1C24.7,1,9.5,9.8,1.3,24l-0.6,1l0.6,1C9.5,40.2,24.7,49,41,49s31.5-8.8,39.7-23l0.6-1l-0.6-1C72.5,9.8,57.3,1,41,1z
+                            M5.3,25c5.3-8.7,13.6-15,23.1-18C22.7,11,19,17.5,19,25s3.7,14,9.4,18C18.9,40,10.7,33.7,5.3,25z M23,25c0-9.9,8.1-18,18-18
+                           s18,8.1,18,18s-8.1,18-18,18S23,34.9,23,25z M53.6,43c5.7-4,9.4-10.6,9.4-18c0-7.5-3.7-14-9.4-18c9.5,3,17.7,9.3,23.1,18
+                           C71.3,33.7,63.1,40,53.6,43z"/></symbol>
+                    <symbol id="fix" viewBox="0 0 24 24"> <g> <g> <g> <path d="M21,24h-7v-6.9h-4V24H3V12.9c0-0.3,0.2-0.5,0.5-0.5S4,12.6,4,12.9v10h5v-6.9h6v6.9h5v-9.5c0-0.3,0.2-0.5,0.5-0.5
+                        s0.5,0.2,0.5,0.5V24z"/></g> <g> <path d="M23.5,12.9c-0.1,0-0.2,0-0.3-0.1L12,1.5L0.8,12.7c-0.2,0.2-0.5,0.2-0.7,0S0,12.2,0.2,12L12,0l11.8,12
+                        c0.2,0.2,0.2,0.5,0,0.7C23.8,12.8,23.6,12.9,23.5,12.9z"/></g> <g> <path d="M19.5,6.5C19.2,6.5,19,6.3,19,6V2.8h-3c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5h4V6C20,6.3,19.8,6.5,19.5,6.5z"/></g> </g> </g> </symbol>
+                        <symbol id="mobile" viewBox="0 0 16 29"> <path d="M2.4,29c-0.4-0.2-0.8-0.3-1.1-0.5c-0.7-0.5-1-1.3-1-2.1c0-2,0-4,0-5.9c0-5.9,0-11.8,0-17.7
+                            c0-0.9,0.3-1.6,1-2.2C1.7,0.2,2.2,0,2.7,0c3.5,0,7,0,10.5,0c1.4,0,2.4,1,2.5,2.5c0,0.1,0,0.1,0,0.2c0,7.9,0,15.7,0,23.6
+                            c0,0.9-0.2,1.7-1,2.2c-0.3,0.2-0.7,0.3-1.1,0.5C9.9,29,6.1,29,2.4,29L2.4,29z M1.2,5.4v0.3c0,6.1,0,12.1,0,18.2
+                            c0,0.3,0.1,0.3,0.3,0.3c4.3,0,8.6,0,12.9,0c0.3,0,0.3-0.1,0.3-0.3c0-6.1,0-12.1,0-18.2c0-0.1,0-0.2,0-0.3C10.2,5.4,5.8,5.4,1.2,5.4
+                            L1.2,5.4z M14.7,4.4c0-0.6,0-1.2,0-1.8c0-1-0.6-1.6-1.6-1.6C9.7,1,6.3,1,2.8,1C2.8,1,2.7,1,2.7,1C1.9,1,1.3,1.6,1.3,2.4
+                            c0,0.6,0,1.3,0,1.9c0,0,0,0.1,0,0.1C5.8,4.4,10.2,4.4,14.7,4.4z M6.1,25.1c-1.6,0-3.2,0-4.8,0c0,0.5,0,0.9,0,1.3
+                            c0,1,0.6,1.5,1.6,1.5c1,0,2,0,3,0c0.1,0,0.1,0,0.2,0C5.4,27,5.4,26.1,6.1,25.1L6.1,25.1z M9.9,28c1.2,0,2.3,0,3.5,0
+                            c0.6,0,1.1-0.4,1.3-1c0.1-0.6,0.1-1.3,0.1-1.9c-1.7,0-3.2,0-4.8,0C10.6,26.1,10.6,27,9.9,28L9.9,28z M8,25.1c-0.8,0-1.4,0.6-1.4,1.4
+                            C6.6,27.3,7.2,28,8,28c0.8,0,1.5-0.7,1.4-1.5C9.4,25.7,8.8,25.1,8,25.1L8,25.1z"/><path d="M7.4,12.1c0,0.3,0,0.7,0,1c-0.1,0.7-0.6,1.3-1.3,1.3c-0.7,0-1.4,0-2.1,0c-0.8,0-1.3-0.6-1.4-1.4
+                            c0-0.7,0-1.3,0-2c0-0.8,0.6-1.4,1.4-1.4c0.7,0,1.3,0,2,0c0.8,0,1.3,0.6,1.4,1.3C7.4,11.4,7.4,11.8,7.4,12.1L7.4,12.1z M5,10.6
+                            L5,10.6c-0.3,0-0.6,0-0.9,0c-0.3,0-0.5,0.2-0.5,0.5c0,0.6,0,1.2,0,1.9c0,0.3,0.2,0.5,0.5,0.5c0.6,0,1.2,0,1.8,0
+                            c0.3,0,0.5-0.2,0.5-0.5c0-0.6,0-1.3,0-1.9c0-0.3-0.2-0.5-0.5-0.5C5.6,10.6,5.3,10.6,5,10.6L5,10.6z"/><path d="M10.7,9.7c0.3,0,0.6,0,1,0c0.8,0,1.4,0.6,1.5,1.4c0,0.7,0,1.3,0,2c0,0.8-0.6,1.4-1.5,1.4c-0.6,0-1.2,0-1.8,0
+                            c-0.9,0-1.4-0.6-1.5-1.4c0-0.7,0-1.4,0-2.1c0-0.7,0.6-1.2,1.3-1.3C10,9.7,10.4,9.7,10.7,9.7C10.7,9.7,10.7,9.7,10.7,9.7L10.7,9.7z
+                             M10.8,10.6c-0.3,0-0.6,0-0.9,0c-0.4,0-0.5,0.2-0.5,0.5c0,0.6,0,1.2,0,1.8c0,0.4,0.2,0.5,0.5,0.5c0.6,0,1.2,0,1.8,0
+                            c0.4,0,0.6-0.2,0.6-0.5c0-0.6,0-1.2,0-1.8c0-0.3-0.2-0.5-0.5-0.5C11.4,10.6,11.1,10.6,10.8,10.6L10.8,10.6z"/><path d="M5,20.3c-0.3,0-0.7,0-1,0c-0.8,0-1.4-0.6-1.4-1.4c0-0.7,0-1.3,0-2c0-0.8,0.6-1.4,1.5-1.4c0.6,0,1.3,0,1.9,0
+                            c0.8,0,1.4,0.6,1.4,1.4c0,0.7,0,1.4,0,2.1c0,0.7-0.6,1.2-1.3,1.3C5.7,20.3,5.3,20.3,5,20.3L5,20.3z M5,19.3c0.3,0,0.6,0,0.9,0
+                            c0.4,0,0.5-0.2,0.5-0.5c0-0.6,0-1.2,0-1.8c0-0.3-0.2-0.5-0.5-0.5c-0.6,0-1.2,0-1.8,0c-0.3,0-0.5,0.2-0.5,0.5c0,0.6,0,1.2,0,1.8
+                            c0,0.3,0.2,0.5,0.5,0.5C4.4,19.3,4.7,19.3,5,19.3L5,19.3z"/><path d="M10.7,20.3c-0.3,0-0.7,0-1,0c-0.7,0-1.3-0.6-1.3-1.3c0-0.7,0-1.4,0-2.1c0-0.8,0.6-1.3,1.4-1.3
+                            c0.7,0,1.4,0,2,0c0.8,0,1.4,0.6,1.4,1.4c0,0.7,0,1.3,0,2c0,0.8-0.6,1.4-1.4,1.4C11.4,20.3,11.1,20.3,10.7,20.3
+                            C10.7,20.3,10.7,20.3,10.7,20.3L10.7,20.3z M10.7,19.3c0.3,0,0.6,0,0.9,0c0.3,0,0.5-0.2,0.5-0.5c0-0.6,0-1.2,0-1.8
+                            c0-0.3-0.2-0.5-0.5-0.5c-0.6,0-1.2,0-1.9,0c-0.3,0-0.5,0.2-0.5,0.5c0,0.6,0,1.2,0,1.9c0,0.3,0.2,0.5,0.5,0.5
+                            C10.1,19.3,10.4,19.3,10.7,19.3L10.7,19.3z"/><path d="M4.5,2.5h4.8v0.9c-1.6,0-3.2,0-4.8,0C4.5,3.1,4.5,2.8,4.5,2.5z"/><path d="M11.2,3.4c-0.3,0-0.6,0-0.9,0c0-0.3,0-0.6,0-0.9h0.9V3.4z"/></symbol>
+                </svg>
+                <div class="header__container">
+                    <div class="topbar">
+                        <div class="center-content hidden-mobile">
+                            <div class="topbar__tools">
+                                <ul class="topbar__tools__list">
+                                    <li>
+                                        <a href="https://fiber.salt.ch/fr/contact">
+                                            <svg aria-hidden="true" focusable="false">
+                                                <use xlink:href="#phone"></use>
+                                            </svg>
+                                            <span>Contact</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://fiber.salt.ch/fr/open-store">
+                                            <svg aria-hidden="true" focusable="false">
+                                                <use xlink:href="#marker"></use>
+                                            </svg>
+                                            <span>Store locator</span>
+                                        </a>
+                                    </li>
+                                </ul>
+    
+                                <p class="a11y-hidden">Sélectionnez votre langue</p>
+                                <ul class="topbar__tools__language-picker">
+                                    <li class="language-picker__item de">
+                                        <a lang="de" hreflang="de" id="deLang" aria-label="Deutsch">
+                                            <span aria-hidden="true">de</span>
+                                        </a>
+                                    </li>
+                                    <li class="language-picker__item fr">
+                                        <a lang="fr" hreflang="fr" id="frLang" aria-label="Français">
+                                            <span aria-hidden="true">fr</span>
+                                        </a>
+                                    </li>
+                                    <li class="language-picker__item it">
+                                        <a lang="it" hreflang="it" id="itLang" aria-label="Italiano">
+                                            <span aria-hidden="true">it</span>
+                                        </a>
+                                    </li>
+                                    <li class="language-picker__item en">
+                                        <a lang="en" hreflang="en" id="enLang" aria-label="English">
+                                            <span aria-hidden="true">en</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center-content">
+                        <a href="https://www.salt.ch/fr/" title="Salt. Retour à la page d&#39;accueil">
+                            <img src="./themes/common/img/global/logo-salt.svg" id="logo" class="logo" role="img" alt="Salt. Retour à la page d&#39;accueil" width="110"></a>
+                        <button id="toggleMenu" class="display-menu" aria-controls="mainMenu" aria-expanded="false"> 
+                            <span class="a11y-hidden">Ouvrir le menu principal</span> 
+                            <span class="caret"></span> 
+                        </button>
+                        <div id="mainMenu" class="navigation">
+                            <nav role="navigation" tabindex="-1">
+                                <ul class="main-menu">
+                                    <li class="main-menu--mobile">
+                                        <a href="https://salt.ch/fr">Mobile</a>
+                                    </li>
+                                    <li class="main-menu--fiber">
+                                        <a href="https://fiber.salt.ch/fr/fiber">Home</a>
+                                    </li>
+                                    <li class="main-menu--soho">
+                                        <a href="https://fiber.salt.ch/fr/business">Business</a>
+                                    </li>
+                                    <li class="help">
+                                        <a href="https://fiber.salt.ch/fr/help">Aide</a>
+                                    </li>
+                                </ul>
+                            </nav>
+    
+                            <div class="topbar hidden-desktop">
+                                <div class="topbar__tools">
+                                    <ul class="topbar__tools__list">
+                                        <li>
+                                            <a href="https://fiber.salt.ch/fr/contact">
+                                                <svg aria-hidden="true" focusable="false">
+                                                    <use xlink:href="#phone"></use>
+                                                </svg>
+                                                <span>Contact</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://fiber.salt.ch/fr/open-store">
+                                                <svg aria-hidden="true" focusable="false">
+                                                    <use xlink:href="#marker"></use>
+                                                </svg>
+                                                <span>Store locator</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                
+                                    <p class="a11y-hidden">Sélectionnez votre langue</p>
+                                    <ul class="topbar__tools__language-picker">
+                                        <li class="language-picker__item de">
+                                            <a lang="de" hreflang="de" href="?service=https://my.salt.ch/&amp;lang=de" aria-label="Deutsch">
+                                                <span aria-hidden="true">de</span>
+                                            </a>
+                                        </li>
+                                        <li class="language-picker__item fr">
+                                            <a lang="fr" hreflang="fr" href="?service=https://my.salt.ch/&amp;lang=fr" aria-label="Français">
+                                                <span aria-hidden="true">fr</span>
+                                            </a>
+                                        </li>
+                                        <li class="language-picker__item it">
+                                            <a lang="it" hreflang="it" href="?service=https://my.salt.ch/&amp;lang=it" aria-label="Italiano">
+                                                <span aria-hidden="true">it</span>
+                                            </a>
+                                        </li>
+                                        <li class="language-picker__item en">
+                                            <a hreflang="en" href="?service=https://my.salt.ch/&amp;lang=en" aria-label="English">
+                                                <span aria-hidden="true">en</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div> <!-- end tools --></div> <!-- end topbar --></div> <!-- mainMenu --></div>
+                </div>
+            </header>
+            <div id="content" class="centered centered--fix">
+                <main role="main">
+                    <div class="circle-container circle-container--top-right">
+                        <div class="circle-container__inner"></div>
+                    </div>
+                    <div class="circle-sibling space-bottom space-bottom--large animated animated--fade-in">
+                        <div class="container">
+                        <h1>Bienvenue</h1>
+    
+                        <div>
+                    <form method="post" id="fm1" action="login">
+                        <!--<p class="space-bottom" th:utext="#{cas.salt.login.title2}"/>--><div id="errorUsername" class="message message--show message--error hidden" tabindex="-1"></div>
+                        <div class="highlight space-bottom">
+                            <p>Accédez à votre compte client Salt Mobile et Salt Home. <br/><br/>Veuillez utiliser votre adresse e-mail pour vous connecter.</p>
+                            <div class="dropdown">
+                                <button type="button" id="moreToggler" class="dropdown__toggler" aria-expanded="false">
+                                    <span>Plus d'informations sur la migration des comptes clients de Salt Mobile</span>
+                                </button>
+                                <p id="moreContent" class="dropdown__content"><svg aria-hidden="true" focusable="false"><use xlink:href="#mobile"></use></svg><strong>Client Salt Mobile uniquement</strong><br/><br/>Connectez-vous avec votre adresse e-mail. Attention, vous devez créer un nouveau compte client : pour faciliter cette procédure, nous avons mis en place <a href="https://support.salt.ch/inviteIdmp.html?lang=fr" target="_blank" rel="noopener noreferer" title="Création du nouveau compte client simplifiée (ouvre une nouvelle fenêtre)">cette page dédiée</a> qui vous permettra de finaliser simplement la création de votre nouveau mot de passe.<br/><br/><svg aria-hidden="true" focusable="false"><use xlink:href="#mobile"></use></svg><svg aria-hidden="true" focusable="false"><use xlink:href="#fix"></use></svg><strong>Client Salt Mobile et Salt Home</strong><br/><br/>Avec la même adresse e-mail, connectez-vous simplement à <a href="https://my.salt.ch">votre compte client</a> (initialement Salt Home) et retrouvez tous vos abonnements Salt Mobile et Salt Home.<br/><br/><svg aria-hidden="true" focusable="false"><use xlink:href="#fix"></use></svg><strong>Client Salt Home uniquement</strong><br/><br/>Connectez-vous comme d'habitude à <a href="https://my.salt.ch">votre compte client</a>.<br/>Pour en savoir plus sur le nouveau compte client et la migration de vos accès, <a href="https://fiber.salt.ch/fr/help/my" target="_blank" rel="noopener noreferer" title="Migration Salt (ouvre une nouvelle fenêtre)">cliquez ici</a>.</p>
+                            </div>
+                        </div>
+    
+                        <div class="grid-2-small-1 has-gutter-l">
+                            <div class="space-bottom">
+                            <label for="username">Adresse email</label>
+                                <input id="username"
+                                    size="25"
+                                    type="text"
+                                    autocomplete="username" name="username" value=""/></div>
+    
+                            <div class="space-bottom">
+                            <label for="password">Mot de passe</label>
+                                <input type="password"
+                                    id="password"
+                                    size="25"
+                                    class="has-icon"
+                                    autocomplete="current-password" name="password" value=""/><button class="pwd-toggler" type="button">
+                                        <span class="helper-icon">
+                                            <svg role="img">
+                                                <use xlink:href="#show-password"></use>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                
+                                <div role="alert">
+                                    <div id="capslock-on" class="capslock" aria-live="polite">
+                                        <p>
+                                            <span>La touche Verr Maj est activée !</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-action">
+                            
+                            <input type="hidden" name="execution" value="cf2b894f-da16-4660-ac6f-eab1d5afb61c_ZXlKaGJHY2lPaUpJVXpVeE1pSjkuWTBJaG12N1FHRWIwUmRIdmo3K1BzdnNRT0w1b1dDN0x4d1hhb0N6UDY2MklPcGoxVXZUeWtodUpQL2c4UGQwWnZEZnRYem9iNmdvWVFoRERVZEtpTjlDbUdNWTlGeTFOQmRPVFBaKzJlb1NXZXV6OXAyUmZuR2hFNUZ2bmpvdis0UmdQellCa1h1MmpIcUlsVDA3WXI2L1VRWUZTcnpmQ3FVbzJoZy96TnZVUHhWcTJqY3BxdkRXd2NqQXdkWE1Yc3NrR0ptb2lzYTNiVVkrQU5uMnlmeitLcjVSVmx6alczUTNyVTA3aGpvVWJ4RERReGM4YjRKRHo0Zm9OR040S3hBRGNXVm05V050MFpoS2lnZHhtYlRUeUo2b0VGMnF3M0JiUXJRdXAyWDVZTG40bkZtTS90VTFSWkg1alNRTG5EUktyMTJnbmlWTVBDSUdHVUxvcmlCZWZNOFJDLytWVDFPeXdjRHpWWDB2REpZbDExdVFrNUhGL3NzTWduNmx5YU5rdjFzM09Ga2hHdHFHWDUxQlVQTDExbW0zTU1GZlZITlJqUzJ4ZHUzWEg2NEROOTZpSnl2UG1GakZ2RzA2M3hKQVJzNmZOVGlqamRPNGxEdGZ0TTBoQmxQNWdYcUd2NzIrWHF6WHNPbDZLRkRXaGlkSHA1bGJjSU5BbFRJUzdFa1VJaTBsYmZ1RmlvaVdtaGNPNFM2akFsQUlVTkRBTDVsck5WQjREZ2VibE9EZlM2bG5weUswTWRPaitoZ29hNGFWYXpFOUd2Y0N0ZVFhWGk0cUkxTlg4MENrVXNhUnNGSVAydTczdVZZNmQ0bkJlaUNlbUpnRE5XUDVPeVVhYTJsVHpqa3NxL3ZiOVVabU96V3VDak9rdDhuVjhXWEJsWTFtNlFzaTA2UlEwbit3RFZybElKNHR3dzlpMU0vcXVkSjdMSExFS1V1V1NvT09LYktPcUZEZm5ZSFVvUVFINHBtUWo4MmkrSGJvODN0SWh1aG9qNlFRZlZmaTZpa3pFYUdFZXIyUzhFSkN4OVVnaUVOK1ExYm56YnptWDNRZ21RU0RKVi9QekRFVEs3anNqUmFidlNrWXB6QnI1SmZKZnFXQkV2MWlDOFlxSHBGTXR0OFd1MFlZUjJzY0xaR3hvS2U3eXJCN1ZSY1RQbG10MDVSVVZqWlM4bWI5KzNFUGJ1M3FNQ2NzNC9rd29KM2xPbkw1d0htK01LR0ZhaThOUGRvMHhsV2JZN3ZSR2l5Y0xkeGdDSnRYNC85WDdXVEFxK1F6VkFsbW9EblVFeTJZMEFteTZINFZ0Y1c2ckNDa00zSzY1T0RiODgrMEJrL0greEJzRmJRTGZCQlFOUkc0NDVtNm9WM0xtaEJBNWlIRWhteitmT0pIS1ppVlpnY1FhanhsM3E3eUltTzIvRDdTcWQ3cnhvdS9mYlhURGhpOG0xRlJHWjlSLzhabzA3MzZHNm94ZjFsSzFoOTJpUzEvdnVRK0htanpOaW96ZDMxM00xbTFHM2JWRVlGMEdydmFiSE1Ib054UE4zN3pkU0V5TG9yNm5MWXNoUitOMjdrM2xLRzdRQlhaRVNWME5vOVVCbUpaR2xZYVlaU1JKak1YZ2hjM3dMT3VlbkNPaGtrR3RRVUxxZCtVUDZzZVpPajAwczdZcWs2ZEVpUVNHN2k0U0RTcHZ6OXhPR240UE9mVWtLUGp0Nm4vSlVFY0FCSkNPcVM2cjlZUXNETEhOSUVsY1ZUNzhNdFdhNU52T09SQ0FxQTVnUVk5eEduNjJIdGFiVS9oemlzTXd5b3lwcTFkMVdsdXUxRHlHY0RleFdTS3ZyTmcreWRWVDM1YzdSMGZ2bkVENWxhU011NDJlTFdhZnZVQWdzNHNyL2tDMlN0M2grSXJjcFV2QkpvWmtJOS9TSW9tMU80MXRlWThucTNUTnAwcThJbk9BSGVFWE5DemxCMFl0bXhSMkM3ejN2azZVZkd2TFlmL280dTFTa1E2MXhhNjFZTkVaVlg5QXZ2UW5LcS82ZFBYbkhWTHhVQS9LaDA1VDNic05ESVNmcGh5TWpzVkV2YVlvbGc0dFppTWJnRml0bk5oTEJxNEtzYk5SMi9lVVZtWnZkNXlCSE4zSmRpdUFabU0vL3BWQU4xdkRiaWoyc1Z2NWVZZXA3WTk2MDViVHhDcmlJbTFPd2V5cGsySWRCUGxGNlZKbnBzVmZYdmJLMkdaTkZobDRyM0t1RDVlYnZpc2JjRlJ3SDZDYW1HTDIrYmpHZHppb1R5M0Z4SGg0ZTF1Z1YyRlIrR3hNRFNuQm1GNnEvNjEyWWkybkZlSGlYd2lmZmdzNVdPV2tJOXZ5TVZyL2hpMHZWRFJCZlIyTVk2N2pLUE8wUW5ra2N3RFNocElydjh5em5vUTBvakNMZEx6RGVGdEE5cFc0dnJiTWxMVmdyZUhFUWdYbHhRNndTMy9XSld3Q1c1eWJHMmhEdDBCOUtYUTlGQmJxb2pZaFJWQnY0cE05RVUrWFc5TlRnT0JnQlJKSm9lQkI0eHEwbkhZWGhCZ3FNaTdxSFcxcGJNLzNUSTJ2RWlzNE1DaXFLQjFsRnkzaXg4eGE0YzR3cnFSd01NZzV2OUJsQXFhYUNwd1pLdlVFRXNNODJCZ28wemltWXZRcEZTY2VkWnJ1aTdFdmF0Y2JLaGFsVGRiT3JxN2xvY2NYd3NiWjF3KzVaQTFRcVhsRTNlWHVPcWpnM003Rk10V2V2UlZlSEs2cVFkdERSWk91YzdKM1JDVzM3TUFoT1ZpT3ZNbFkyQkZ4S0pQZlZPV3VWbXdLbWkrRlRxdlhzOStRK0xzNEVsQllhK3QwK1pCcFpSTVY5N2ZoY0toZWtIaVhNQlhKUUU2NlR1b0xKTFY2QzRGRHRwL01QY1NuOTROdFlMR2pEUENPZHFHb2cvYkFOZVR3ZGtnOTEzczluZzV2dW1BZ0NnenNTOVBVSlF0MWljTmNsRnBYOUNrS3Jjb3hpczR1b1l6V2hWZmRrY2tDVjVFaUtxZ2k1YnRtUFcrZGdTRkZxeU1iVTE5MmRlTXJyWTkvN2h4cVo5bEhoN2QrK3I0d0IxY2FJb00zMm43RGJZQThzTzdVanhTWEl3WDVsR3NXZ2RNVk5KaHFHSUJmSFNPZ2o2cEtCSlg0Q3huZGtLM1I5VGZDY0pYU1VMSXFqa1U2c2wrRWkxaFZ4WXBuRjlZUC9KalNPOVpnOVZ4TkVvdG94dHp2WjkxemdpZXZ2bnRZT2VrL05RZjNKSEE2U0lqS091Zk1EMVdNcWtsMjJQeUxqaUhTM2lZVDMxb3UyV01Kb0IxeXpPcUhSR3ZnNkxCRis4a1UrMDJyK3dMVVF3T1BOa0xmSk9IV0pBaFBNVnlGVXNVdXlML1RZMTNRTlA2YUZmWWVtQ1N1OC9DZzQ0R0NGYU9HRXBaYSsxc1BEVTFpQW9kNVJTb2thdkNwOThic1JyVGNXL1JWMXZpemlFVVRkNGVlOGlMSWFMQXVNdllDem40eGhyQjI2SkJWMENoWXR1Y3phcEVyNjQzOEpGQmNvbkRIZnZkQXd6aklRL2kza0gyaXgzL0NLU2M5Q3NZMjczbzF4KzlFRDc2YzNiSjNSdUhGNGk1bTBLdUg5WDIvNWFOU2FQWUN3VVN0YnZ1VG5iNGVtSEZkMkZUY0ZGRThOdm0zcThpdDA3Z2E1SkVQSVZTN0djTGJhNEVMckd3aWpBQUVhSlhwc3lvbDA4RC9OQi9WVERpRzhURFFEcUZsWmJ0eWlNLzR4Z2NWMGFZYjBjcU56QmNoZWVFSm9ibUJka01tTnZJSTdTK3JtUDRsWHpQWlhiNWNQK2hBWDVlUTJRc0Y5Q0lBYW5yQ28zNXFOQTQzQ3pYS1NtclRNamlIQU12eGJTUks2LzdFOXZTRmFybnFSQUpxNFM3VXB1ZEJrNVJlRmhUc1RvaGxSV0wxZjF2dGxzNU5nTjNxTE5FRjdUNC9uMFhKRVV6c2xVTnFGUDdONkNNTEFZamMvSys5bUcxV1BjRmZHTTlvNllYeSt0N3hVVVp4UGxHNDYveGdUS0tBVDA0TFY2ZjJOT3lUUytVdFdpVlVZWmU5L1dsMTJ3WkloMkhLazFnaFRJVEhuUUJGUWJzd1prQnM0OXdkYlc5UkNMQXhIYTg4bVV0OXAwNGhFZkpzYmRZQkZzZ09KMUI4OEJMZHJ4Z3FaU05WOGpwT0p0d2hBUE5rQ3JBVnJ6YitCZE42STR2SUI1WWRZRTFCNGRhRVRCb3kzY0QrNnFCWlRVVWswNTBoMkhVZE8rUzJZMFVodEtvTkYyUzBkaE1ZNjl0OUhFK0luZFZhSGdadklmWExaZXNrakt3M0hTbU43b0RMVHY3MjhicHphdTBiVDY3Qm1JRlFualpkNld0dGJCaW9wdnhGK3pNMThtTC83Qk81RmN4dWZocGQxYUV2bkJuTGVVRzd4Yi9CTnpFQm5xekE2UEdWVDlCYWlkc2ljVFN5TER4cGZwZDFSdlprTXFEM0pQTXdVQVMzN3o3bUtyenJHR0ZCamtHSEloZVlWakN1RzZpT3QybVMwaUx3MnBubVFJQWF2NnloUWtJS00ybE84QjJOYXQzTzhaQzhrNC9RTHdGNDdyZVRmdGdRQXMvaU9VeFIyRVRpY2Jsd1VNY0E3VUh3aXVoTlNsTkRTcU12QkM5Ymx6Y09zd2JQc1E9PS5mSnN1d2M4UnhXNVJYQS1ycFZWT2pCQ0VzdUNfN09hZ2ZENndDYzNCaVFmdEpvMFFGbXcwWFFnU1E5M05rNjdyWDJXRzBwOVZmRUpYUV9TU3FjNlJSZw=="/><input type="hidden" name="_eventId" value="submit"/><input type="hidden" name="geolocation"/><button class="btn btn--centered"
+                                name="submit"
+                                type="submit"
+                            >Se connecter</button>
+                            <div class="footer-links align-center space-top">
+                                <span><a href="https://support.salt.ch/inviteIdmp.html?lang=fr">Vous avez oublié votre adresse?</a></span>
+                                <span><a href="https://support.salt.ch/recoveryPassword.html?lang=fr">Mot de passe oubli&eacute;?</a></span>
+                                <span><a href="https://support.salt.ch/selfRegistration.html?lang=fr">Créez votre compte</a></span>
+                            </div>
+                        </div>
+                    </form>
+    
+                    <script type="text/javascript">
+                        var i = "Un moment s'il vous pla\u00EEt..."
+                        var errorUsername = "\u00C0 partir de maintenant, vous devez vous connecter avec votre adresse e-mail.<br\/><br\/><a href=\"https:\/\/support.salt.ch\/inviteIdmp.html?lang=fr\">Cliquez ici<\/a> pour compl\u00E9ter la cr\u00E9ation de votre compte avec votre nom d'utilisateur<br\/><br\/>Je ne me souviens pas de mon nom d'utilisateur, <a href=\"https:\/\/support.salt.ch\/selfRegistration.html?lang=fr\">je cr\u00E9e un nouveau compte<\/a>."
+                        var urlMy = "https:\/\/my.salt.ch\/"
+                        var showPassword = "Afficher le mot de passe"
+                        var hidePassword = "Masquer le mot de passe"
+    
+                        $( document ).ready(function() {
+    
+                            $('.language-picker__item a').each(function(i, e){
+                                $(e).attr('href', '/cas-external/login?service=' + encodeURIComponent(urlMy + '?lang=' + $(e).attr('lang')) + '&lang=' + $(e).attr('lang'));
+                            }) 
+    
+                            dropdownToggle($('#moreToggler'), $('#moreContent'), true);
+    
+                            var pwdToggler = $('.pwd-toggler');
+                                
+                            // show/hide password
+                            if (pwdToggler.length > 0) {
+                                        
+                                pwdToggler.find('.helper-icon').attr('title', showPassword);
+                                pwdToggler.find('svg').attr('aria-label', showPassword);
+    
+                                $('.pwd-toggler').on('click', function() {
+                                    $(this).find('use').attr('xlink:href', function(index, attr){
+                                        return attr == '#show-password' ? '#hide-password' : '#show-password';
+                                    });
+                                    $(this).find('svg').attr('aria-label', function(index, attr){
+                                        return attr == showPassword ? hidePassword : showPassword;
+                                    });
+                                    
+                                    $(this).find('.helper-icon').attr('title', function(index, attr){
+                                        return attr == showPassword ? hidePassword : showPassword;
+                                    });
+    
+                                    $(this).parent().find('input').attr('type', function(index, attr){
+                                        return attr == 'password' ? 'text' : 'password';
+                                    });
+                                });
+                            }
+    
+                            $("#fm1").submit(function (event) {
+                                $("#fm1").attr('action', 'login');
+                                $('#errorMsg').remove();
+                                $('#errorMsg').hide();
+    
+                                if (validateUsername($("#fm1"))) {
+                                    $("button[type=submit]").attr("disabled", true);
+                                    $("button[type=submit]").text(i);
+                                    return true;
+                                } else {
+                                    event.preventDefault();
+                                    if($('#errorMsg').length) {
+                                        $('#errorUsername').hide();
+                                    }
+                                    else {
+                                        $('#errorUsername').html(errorUsername).show().removeClass('hidden').addClass('space-bottom').focus();
+                                    }
+                                    return false;
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+                    </div>
+                    </div>
+                </main>
+            </div>
+            <footer role="contentinfo" class="footer">
+                <div class="center-content">
+                    <ul class="unstyled inline">
+                        <li>
+                            <a href="https://fiber.salt.ch/fr/legal">Mentions l&eacute;gales</a>
+                        </li>
+                        <li>
+                            <a href="https://fiber.salt.ch/fr/legal/general-terms-and-conditions">Conditions g&eacute;n&eacute;rales</a>
+                        </li>
+                    </ul>
+                    <p class="copy">
+                        &copy; <span id="year"></span> <a href="https://www.salt.ch/fr/">Salt Mobile SA</a>
+                    </p>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript" src="/cas-external/webjars/zxcvbn/4.3.0/zxcvbn.js"></script>
+    <script type="text/javascript" src="/cas-external/webjars/jquery-cookie/1.4.1-1/jquery.cookie.js"></script>
+    <script src="/cas-external/webjars/store.js/1.3.17/store.min.js"></script>
+    <script type="text/javascript" src="/cas-external/themes/common/js/cas.js"></script>
+    
+    
+    <script>
+        /*<![CDATA[*/
+    
+        var trackGeoLocation = false;
+    
+        var googleAnalyticsTrackingId = null;
+    
+        if (googleAnalyticsTrackingId != null && googleAnalyticsTrackingId != '') {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    
+            ga('create', googleAnalyticsTrackingId, 'auto');
+            ga('send', 'pageview');
+        }
+    
+        /*]]>*/
+    </script>
+    
+    </body>
+    </html>
+    
