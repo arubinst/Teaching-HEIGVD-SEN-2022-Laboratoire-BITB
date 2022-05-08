@@ -1,5 +1,9 @@
 # Teaching-HEIGVD-SEN-2022-Laboratoire-BITB
 
+> Auteur : Gwendoline Dossegger
+>
+> Date : 08.05.2022
+
 
 ## Une petite note sur l'éthique
 
@@ -76,6 +80,9 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+<img src="images/bitb_first.png" style="zoom: 67%;" />
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,15 +110,28 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+| <img src="images/page_login_init.png" style="zoom:50%;" /> | <img src="images/page_login_init_form.png" style="zoom:50%;" /> |
+| ---------------------------------------------------------- | ------------------------------------------------------------ |
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+J'ai d'abord voulu créer ma fenêtre BITB avec la connexion d'Apple. Toutefois, il semblerait qu'ils génèrent des tokens dans l'URL pour la connexion. Le lien est donc directement cité comme "invalide".  Je me suis donc rabatue sur la connexion via Google qui, elle, est constante.
+
+| <img src="images/page_login_hack.png" style="zoom:50%;" /> | <img src="images/page_login_hack_form.png" style="zoom:50%;" /> |
+| ---------------------------------------------------------- | ------------------------------------------------------------ |
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
-Réponse :
+XX-TITLE-XX : 		Sign in - Google Account	 (Titre de la page BITB)
+XX-DOMAIN-NAME-XX: 	https://accounts.google.com	 (Nom du domaine de la page BITB)
+XX-DOMAIN-PATH-XX:	/o/oauth2/auth/identifier?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.reddit.com%3Fid%3Dauth873786&response_type=permission%20id_token&scope=openid%20email&openid.realm&include_granted_scopes=true&prompt=select_account&client_id=705819728788-b2c1kcs7tst3b7ghv7at0hkqmtc68ckl.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fwww.reddit.com&fetch_basic_profile=false&gsiwebsdk=2&flowName=GeneralOAuthFlow (Chemin qui suit le nom de domaine de la page BITB)
+XX-PHISHING-LINK-XX: google.html (Chemin de la page html de connexion Google)
 ```
 
 ---
@@ -119,21 +139,79 @@ Réponse :
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
 ```
-Réponse :
+Site :
+Les deux pages sont quasi identiques. La seule différence est l'image de gauche qui est légérement plus grande dans la version officielle. Il suffirait d'adapter ce décalage via le CSS. Mais comme ce n'est pas flagrant, je ne l'ai donc pas fait.
+
+J'ai aussi constaté que le bouton Apple ne fonctionne pas sur ma version. Il faudrait aussi la configurée comme pour la connexion avec Google. Mais, comme expliqué plutôt, des tokens dans l'URL sont générés pour la connexion ce qui rend l'URL invalid et aucun formulaire n'est affiché. Je l'ai donc enlevé.
+
+Formulaire de connexion Google:
+Etant sous Linux et avec un affichage customisé, il n'y a pas un affichage de fenêtre BITB compatible. Ici, j'ai utilisé la version MacOS. Un utilisateur attentif verra directement la différence. De plus, il n'est pas possible de modifier la taille de cette page.
+
+On peut remarquer que la page de connexion de Google (réelle) est traduite automatiquement en français alors que ma version est en anglais. Le titre doit ainsi être adapté pour éviter d'avoir de l'anglais et du français ou traduire la page directement en français.
+
+Les liens ainsi que le bouton n'effectuent aucune action. Il faudrait modifier pour que des actions s'effectue et que le phishing soit invisible aux yeux de la victime.
+
+Pour terminer, on ne peut pas sortir la page BITB de notre fenêtre (normal...). Un utilisateur habitué à bouger sa fenêtre de connexion pourrait détecter un problème.
 ```
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
+Dans un premier temps, j'ai affiché le code source de la page **Reddit.com/login**. J'ai ensuite fait un ctrl+s et enregistrer le fichier en tant que `index.html`. 
+J'ai, ensuite, récupéré le code de la page de connexion Google de la même manière et enregistré en tant que `google.html`.
+
+J'ai ensuite modifié le fichier index.html afin qu'il soit capable d'afficher notre page BITB. Pour ce faire et dans le head, j'ai inclu le CDN de jquery et ajouté la fiche de style fourni pour le template de MacOS Chrome Dark.
+
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="style.css">	
 ```
-Réponse :
+
+Puis, en récupérant le code du template, j'ai adapté les variable `DOMAIN-NAME`, `DOMAIN-PATH` et `PHISHING-LINK` afin que ça corresponde avec la page réelle.
+
+```html
+<div id="window">
+    <!-- Title bar start -->
+    <div id="title-bar-width">
+        <div id="title-bar" class="outer yosemite">
+            <span class="dots">
+             <div id="exit" class="dot red"></div>
+             <div id="minimize" class="dot amber"></div>
+             <div id="maximize" class="dot green"></div>
+            </span>
+             <div>
+              <!-- XX-TITLE-XX -->
+              <span id="logo-description">Sign in - Google Account</span> 
+            </div>
+        </div>
+        <div id="url-bar">
+            <img src="./ssl.svg" width="20px" height="20px" id="ssl-padlock">
+            <!--XX-DOMAIN-NAME-XX-->
+            <span id="domain-name">https://accounts.google.com</span>
+            <!--XX-DOMAIN-PATH-XX-->
+            <span id="domain-path">/o/oauth2/auth/identifier?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.reddit.com%3Fid%3Dauth536175&response_type=permission%20id_token&scope=openid%20email&openid.realm&include_granted_scopes=true&prompt=select_account&client_id=705819728788-b2c1kcs7tst3b7ghv7at0hkqmtc68ckl.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fwww.reddit.com&fetch_basic_profile=false&gsiwebsdk=2&flowName=GeneralOAuthFlow</span>
+        </div>
+    </div>
+    <!-- Content start -->
+    <!--XX-PHISHING-LINK-XX-->
+    <iframe id="content" src="google.html" frameBorder="0"></iframe>
+    <script src="script.js"></script>
+</div>
 ```
+
+Dans le fichier CSS, le placement de la div a été modifié (centre de la page) ainsi que son affichage par défaut (`display:none`). Pour terminer, on met à jour la valeur du display de la `div window` lorsqu'on clique sur le bouton `Continue with Google`. 
+
+
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions :
+C'est toujours impressionnant de constater la facilité qu'on peut avoir à reproduire des sites internet à quasi l'identique. Très peu de différence existe entre la page de connexion Google et la mienne. Ainsi si l'on est pas attentif ou si l'attaque est bien réalisée, on pourrait se faire avoir très facilement. 
+
+C'est dommage qu'il n'existe pas une version BITB pour Linux. Celle-ci pourrait être implémentée assez facilement puisque ce n'est que du CSS a modifié. Je suppose que le fait qu'il y ait plusieurs versions et le fait que l'interface soit customisable rend la tâche plus difficile. 
+
+En comparant l'URL de connexion Apple et celle de Google, le fait d'avoir des tokens sur celle d'Apple qui rend indisponible le formulaire s'ils sont erronés semble être un peu plus sécurisé et rend l'attaque plus complexe.
 ```
 ---
 
