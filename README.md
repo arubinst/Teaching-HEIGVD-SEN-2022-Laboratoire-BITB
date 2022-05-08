@@ -76,6 +76,13 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+```
+docker run --name bitb-nginx -v  $PWD/BITB/Windows-Chrome-DarkMode:/usr/share/nginx/html -p 8080:80 -d nginx
+```
+
+![image-20220508193238485](figures/image-20220508193238485.png)
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,15 +110,31 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+![image-20220508203256278](figures/image-20220508203256278.png)
+
+La fenêtre a été mise en mode développeur pour avoir la même vue que plus bas
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![image-20220508202913043](figures/image-20220508202913043.png)
+
+Pied de la page. La pop-up est un poil trop grande
+
+![image-20220508203421666](figures/image-20220508203421666.png)
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
-Réponse :
+XX-TITLE-XX : 	   : Le titre de la fenêtre originale chez Salt, soit Salt My Account. Pas très logique mais 					  on veut quelque chose de pareil.
+Logo 			   : Un logo "Apple touch icon" utilisé sur le site de base. Ce n'est pas le logo de salt 	 					  qui est utilisé.
+XX-DOMAIN-NAME-XX  : Le nom de domaine pour le login, soit "login.salt.ch"
+XX-DOMAIN-PATH-XX  : Le chemin (path) pour le domaine, soit /cas-external/login?								     			 service=https%3A//my.salt.ch/&lang=fr
+XX-PHISHING-LINK-XX: Une copie de la page de login
 ```
 
 ---
@@ -119,21 +142,24 @@ Réponse :
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
 ```
-Réponse :
+Il existe un menu, et quand on clique pour défiler les éléments, ceux-ci n'appraissent pas. 
+De plus, les liens de Salt ne peuvent pas être utilisé, il faudrait donc recopier tout le site pour que ce soit ok. Mais ce n'est pas très utile.
+Mais sinon la page est exactement similaire graphiquement.
 ```
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
-Réponse :
+J'ai copié la source html de la page, et observé chacune des dépendence css du fichier. Dès que ceci était fait, je les ai copié dossier afin d'avoir presque le même fichier html. Avec ceci, la vue était déjà exactement similaire. De plus la page html est presque la même car tout les lien sont des liens absoluts, sauf les ressource, qu'il a suffit de copier. 
 ```
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions :
+Je pensais que c'était plus compliqué de voler la vue d'un site aussi critique qu'un opérateur. Il ont fait un css tellement bien fait qu'il s'applique parfaitement à cette pop-up flottante de connexion. 
+C'est assez effrayant je trouve, car avoir accès au compte d'un utilisateur permet d'avoir beaucoup d'informations sur lui. (Je ne connais pas le profil chez Salt pour être honnête). Mais ce ne serait pas étonnant de voir les appels effectué, ce qui est critique. 
 ```
 ---
 
