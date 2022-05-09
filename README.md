@@ -1,3 +1,6 @@
+Lucas Gianinetti
+___
+
 # Teaching-HEIGVD-SEN-2022-Laboratoire-BITB
 
 
@@ -78,6 +81,8 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
 ---
 
+![](.README_images/windowsLightMode.png)
+
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
 
 - XX-TITLE-XX - Le titre de la fenêtre
@@ -104,36 +109,65 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
 ---
+Page d'accueil de github:
+
+![](.README_images/github_original1.png)
+
+Page du login:
+
+![](.README_images/github_original2.png.png)
+
 
 #### Livrable : Capture d'écran de votre version.
 ---
 
+Page d'accueil clonée:
+
+![](.README_images/github_clone1.png)
+
+Au final le cas de github n'est pas parfaitement adapté à la situation car une fenêtre dédiée est utilisée pour le signin et non un popup. Mais il suffit d'adapter à un exemple ou le sign in fait montrer un popup, j'ai essayé avec twitter mais je n'arrivais pas a cloner le site.
+
+Page de sign in clonée :
+
+![](.README_images/github_clonee2.png)
+
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
-Réponse :
-```
-
+Réponse : 
+- XX-TITLE-XX - Le titre de la fenêtre
+    - Sign in to GitHub GitHub
+- XX-DOMAIN-NAME-XX - Le nom de domaine spoofé 
+    - github.com/login
+- XX-DOMAIN-PATH-XX - Le chemin (path) pour le domaine
+    - [laissé vide]
+- XX-PHISHING-LINK-XX - Le lien de phishing qui sera inséré dans votre fenêtre```
+    - login.html
 ---
 
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
 ```
-Réponse :
+Réponse : 
+* Sur la page d'accueil du site original on peut scroll vers le bas et voir d'autres informations générales. Sur mon site j'ai enlevé cette partie et seule la partie visible au chargement de la page est affichée.
+* Si on clique sur les autres liens que le sign in il ne se passe rien ou il y a une erreur
+* Si on clique sur Sign in (celui de la page de Sign in) il y a une erreur
 ```
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
-Réponse :
+Réponse : J'ai utilisé l'outil webhttrack pour cloner la page d'accueil et la page de login. Il suffit d'accéder à l'interface web du logiciel, d'y indiquer l'url du site à cloner. Comme option pour le clonage j'ai indiqué "Get individual file".
+
+Ensuite j'ai modifiée le fichier index.html de la page d'accueil clonée. Dans le lien correspondant au bouton Sign in, j'y ai indiqué le fichier bitb qui lui ensuite contient la référence au fichier login.html qui est le login cloné de github.
 ```
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions :
+Conclusions : Il est relativement facile de cloner un site pour faire du phishing si l'on imagine que la cible va effectuer l'action de login directement. Dans le cas ou la cible va effectuer une action qu'on attend pas (ce qui est hautement probable), il est nécessaire d'imiter les autres fonctionnalités du site (par exemple la création de compte, l'affiche d'informations générales que le site propose, etc) ce qui va tout de suite prendre beaucoup plus de temps.
 ```
 ---
 
