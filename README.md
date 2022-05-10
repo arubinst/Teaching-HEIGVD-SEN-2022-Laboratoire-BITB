@@ -76,6 +76,7 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+![first window](images/first_window.png)
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -102,16 +103,24 @@ Votre travail pour ce TP sera limité à afficher la fenêtre avec le formulaire
 Evidement, ce travail peut être combiné avec des outils comme [Gophish](https://github.com/gophish/gophish/releases), ce qui risque de produire des résultats redoutables.
 
 ---
-#### Livrable : Capture d'écran du site légitime que vous avez cloné.
+#### Livrable : Capture d'écran du site légitime que vous avez cloné.  
+Nous allons tenter de cloner la page de [login de Digitec](https://id.digitecgalaxus.ch/login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshau.digitec.ch%26redirect_uri%3Dhttps%253A%252F%252Fwww.digitec.ch%252Fauth%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520customerinfo%2520email%2520roles%2520custom.profile%2520offline_access%26code_challenge%3DgFydnD65Jl3LySfIkP2VHLLDstJTg62IA5Z15gtP7Ow%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D637878099630756125.MGIyMjA0MzMtY2JjOC00YzNmLTkxN2EtYjY2OTVlZjA5Nzc2NDkxYzRhNWItOGJjNS00ZTVhLTg5MWEtZWQyZTgwNDliYzEz%26acr_values%3Dtenant%253Adigitec.ch%2520_ga%253A184825687.1651088116%2520.cid%253A398abdf3-efd3-4e5b-9bdf-a2bb25b7a56d%26state%3DCfDJ8DKXc2aNgkZDqEP_yFBcnmG5XM1-IbjUmT4fX8uyFoBM05N8OVVylHfiQZ6c8pxedLXEdZUgTNvRjINthXq1paZpn90QbBD44nAvwxzqJio-tZkHgI9JzC-xypeSaz1T9olTHTmfAqh-8F4ycwIRfz-aF1bjfc9PYp8zmohtBpX6MMTizCzd2e1iAYwgHElNQ0_t1VtIYeMW_LWLmk89Uiu1xjwWPmJrXgcI-7tmoMk2yBTqgGfB5YzaWoOCnW6YbLY7NCq--essz7OlXjqL67rxg3BixEf7-llMKaoPPCBPtpXW5qKWbfmExLqddLiC17hK4y-fYLlVEDrwxa262pUOKS0Pcjuffrs8ByR71cw05QDlBZMeSxDYKppm1rZg5w).  
+![Digitec Login Original](images/digitec_login_original.png)
 ---
 
 #### Livrable : Capture d'écran de votre version.
+![Digitec Login Clone](images/digitec_login_clone.png)
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
 Réponse :
+- **XX-TITLE-XX**: Digitec Login
+- **XX-DOMAIN-NAME-XX**: id.digitecgalaxus.ch
+- **XX-DOMAIN-PATH-XX**: https://id.digitecgalaxus.ch/login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshau.digitec.ch%26redirect_uri%3Dhttps%253A%252F%252Fwww.digitec.ch%252Fauth%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520customerinfo%2520email%2520roles%2520custom.profile%2520offline_access%26code_challenge%3DQgD9vz-E8K4ClD061YUuphtZQY_RS3ebPRZgwLgmj8M%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D637878103095376652.OWRjYmRmZTEtY2FjNC00NDNkLTlmNWUtOTNjMmQzODFhYWVlYjljZDBiYTEtYTI3NC00MmY0LTk2NTgtOGYzYWFjYTY4ZjI3%26acr_values%3Dtenant%253Adigitec.ch%2520_ga%253A184825687.1651088116%2520.cid%253A398abdf3-efd3-4e5b-9bdf-a2bb25b7a56d%26state%3DCfDJ8DKXc2aNgkZDqEP_yFBcnmFPtFCDRf_4TGguHQkIszlbzyhGqvU3EyTNWvEjd_5z1U1zTDUVcLekj3-ROJgXihMedq9DpxXSDixZBIL-ODc__OUTC_iCKLeHKYL_CyR7Zq6GM9Ms1Uy_wdm2bEYlte85Q2lLVTF7Zp0UvFnzoWssJwySyB27pyDrI14oD8x94lYhxxxkQLY9ykmX1JOMb67WMSPqQPzTc5V-k_IDUShBzaE-NeYVxktVbyz23wN9NvhiZA7jYzxtfa5KgxZlLDQGrS7tXIl6l3XjOgiUrJceEhPOJb-AEHpwfeSNAYbUd4JHCJLeK5stXpwsQwIRqRt1Kmi-c1i9G2DrpjdtX72v2gRG7NiIe7z6t6O2OtXqgg
+- **XX-PHISHING-LINK-XX**: [clone/index.html](BITB/MacOS-Chrome-DarkMode/clone/index.html)
 ```
 
 ---
@@ -120,20 +129,27 @@ Réponse :
 
 ```
 Réponse :
+- Pas une différence, mais la langue du login cloné est en Allemand. Un utilisateur francophone accédant au vrai login de Digitec verra un login en français. On pourrait toujours adapter la langue du clone si on souhaite s'attaquer à une cible francophone.
+- Bien évidemment les liens (ex. changement de langue) ne fonctionnent pas.
+- Les bordures. Avec BITB les bordures sont collés à l'HTML, ce qui pourrait indiquer à la cible que quelque chose ne tourne pas rond.
+- Le logo est pixelisé et tout moche des deux côtés, dont tout va bien.
 ```
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
-Réponse :
+Réponse : J'ai simplement utilisé https://saveweb2zip.com/en. Si on compare cet outil avec d'autres outils en lignes, on remarque que celui-ci génère moins de fichiers pour un résultat correct. On note certains fichiers dont l'utilité est relativement obscure (clone/TAs).
+Les scripts js sont téléchargés ainsi que les fonts, ce qui rend l'expérience utilisateur plus proche du login original.
+Et le fichier clone/index.html est relativement bien construit. 
 ```
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions :
+Conclusions : On remarque à quel point il est évident de mettre en place une fausse page de login. Comme probablement de nombreux utilisateurs, je ne passe que très peu de temps à lire le contenu affiché sur une page de login, surtout s'il s'agit d'un site que je connais, comme ici, Digitec. Je ne m'amuse pas à jouer au jeu des 7 erreurs avec chaque login que je rencontre. Si j'ai un doute sur un login, la première chose que je regarde est l'URL - qui est facilement dupée comme nous l'avons vu dans ce laboratoire. La fenêtre dans la fenêtre est peut-être l'élément qui me ferait douter de la légitimité de la page de login. Mais encore une fois, un moment d'inattention est vite arrivé. 
+On imagine facilement les possibilités qui existent avec ce genre de phishing. Ici nous avons cloné Digitec. Mais s'il s'agissait d'un compte Google, les conséquences pourraient être désastreuses. L'accès au compte Google d'une victime -  notamment sa boite email - nous fournit un accès quasi complet sur la vie numérique d'une victime.
 ```
 ---
 
