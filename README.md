@@ -78,6 +78,8 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
 ---
 
+![capture fenetre BITB](images/BITB.png)
+
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
 
 - XX-TITLE-XX - Le titre de la fenêtre
@@ -85,7 +87,7 @@ Cette fenêtre est une manière assez utile de comprendre tout de suite les para
 - XX-DOMAIN-PATH-XX - Le chemin (path) pour le domaine
 - XX-PHISHING-LINK-XX - Le lien de phishing qui sera inséré dans votre fenêtre
 
-Le fichier ```logo.svg``` dans le même répertoire vous permet de spoofer le logo du domaine. Il n'est pas visible sur la version Mac mais sur la version Windows uniquement. Vous pouvez changer le fichier ou éditer son nom dans ```index.html```.
+Le fichier ```logo.svg``` dans le même répertoire vous permet de spoofer le logo du //domaine. Il n'est pas visible sur la version Mac mais sur la version Windows uniquement. Vous pouvez changer le fichier ou éditer son nom dans ```index.html```.
 
 Je procède à modifier les 3 premiers variables de la version Windows light. Je trouve aussi rapidement un logo correspondant à Outlook et voici le résultat :
 
@@ -104,14 +106,19 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
 ---
+![Facebook origin](images/facebook_origin.png)
 
 #### Livrable : Capture d'écran de votre version.
 ---
-
+![Facebook origin](images/facebook_clone.png)
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
 Réponse :
+XXX-TITLE-XX: Facebook -> titre de la fenêtre "popup"
+XX-DOMAIN-NAME-XX: https://facebook.com -> nom de domaine
+XX-DOMAIN-PATH-XX: /login  -> chemin
+XX-PHISHING-LINK-XX : login.html -> fichier index du site cloné
 ```
 
 ---
@@ -120,6 +127,8 @@ Réponse :
 
 ```
 Réponse :
+visuellement pas grand chose à part le logo qui est pas bien mis à  l'échelle
+sinon quand on clique sur des liens ce la nous retourne un 404
 ```
 
 ---
@@ -127,6 +136,8 @@ Réponse :
 
 ```
 Réponse :
+vu que la page de login est simple j'ai juste copier collé le contenu html en inspectant la page web.
+Son contenu est copié dans un fichier à part login.html et ce dernier est référencé dans le lien de phishing
 ```
 
 ---
@@ -134,6 +145,11 @@ Réponse :
 
 ```
 Conclusions :
+cloner une simple page de login est une tâche très simple, j'ai pas eu recours à des logiciels/site web tiers pour pouvoir cloner quasiment parfaitement la page de login.
+
+Pour mieux pouvoir orienter la victime vers les actions désirée il faut minimiser les interaction avec la page clonée heureusement la page de login de facebook est très simple et ne comporte pas énormément de liens.
+
+si on veut absolument répliquer à 100% le site il faudrai rediriger proprement le client quand on clique sur les liens en pied de page. Il faudrai faire des changements pour ouvrir un nouvel onglet quand on clique sur un des liens car si l'on fait ça actuellement le contenu est changé dans la fenêtre de popup
 ```
 ---
 
