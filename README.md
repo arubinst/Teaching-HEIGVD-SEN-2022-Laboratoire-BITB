@@ -139,9 +139,9 @@ Réponse :
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
-Réponse : J'ai simplement utilisé https://saveweb2zip.com/en. Si on compare cet outil avec d'autres outils en lignes, on remarque que celui-ci génère moins de fichiers pour un résultat correct. On note certains fichiers dont l'utilité est relativement obscure ([exemple1](BITB/MacOS-Chrome-DarkMode/clone/TAs)).
+Réponse : J'ai simplement utilisé https://saveweb2zip.com/en. Si on compare cet outil avec d'autres outils en lignes, on remarque que celui-ci génère moins de fichiers pour un résultat correct. On note certains fichiers dont l'utilité est relativement obscure (clone/TAs).
 Les scripts js sont téléchargés ainsi que les fonts, ce qui rend l'expérience utilisateur plus proche du login original.
-Et le fichier [index.html](BITB/MacOS-Chrome-DarkMode/clone/index.html) est relativement bien construit. 
+Et le fichier clone/index.html est relativement bien construit. 
 ```
 
 ---
