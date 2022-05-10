@@ -139,7 +139,7 @@ Ce dernier correspond au nom du fichier contenant le faux formulaire de login
 ```
 Réponse : Oui.
 Il manque un certain nombres d'éléments du site par exemple le logo Deezer ou tous les liens de bas de page
-Le pop-up de login est également légèrement différent. Le titre de l'onglet est en dessous du logo et le logo n'est pas exactement pareil. Les contours du formulaire sont également moins propres.
+Le pop-up de login est également légèrement différent. Le titre de l'onglet est en dessous du logo et le logo n'est pas exactement pareil. Les contours du formulaire sont également moins propres. Les icônes à côté du chemin de domaine ne sont pas présentes
 La plus grande différence est le fait que le pop up n'est pas un onglet à part entière, il est coincé dans le navigateur et ne peut en sortir.
 ```
 
