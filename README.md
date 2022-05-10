@@ -76,6 +76,9 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+![](images/bitb_1.png)
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,15 +106,30 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+J'ai décidé d'utiliser le site `deezer`  :
+
+ ![](images/original.png)
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![](images/fake.png)
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
 Réponse :
+XX-TITLE-XX : Connexion : comptes Google - Google Chrome
+XX-DOMAIN-NAME-XX : accounts.google.com
+XX-DOMAIN-PATH-XX : /o/oauth2/auth/identifier?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.deezer.com%3Fid%3Dauth490860&response_type=permission%20id_token&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuser.emails.read%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuser.birthday.read&openid.realm&include_granted_scopes=true&client_id=630457285321-d5nmkpnjktjoeh426nvdu40rch1b1qe0.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fwww.deezer.com&fetch_basic_profile=false&gsiwebsdk=2&flowName=GeneralOAuthFlow</span>
+XX-PHISHING-LINK-XX : google.html
+
+Toutes ces valeurs ont été récupérées sur le formulaire de login du vrai site de deezer à l'exception du lien de phishing.
+Ce dernier correspond au nom du fichier contenant le faux formulaire de login
 ```
 
 ---
@@ -119,21 +137,29 @@ Réponse :
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
 ```
-Réponse :
+Réponse : Oui.
+Il manque un certain nombres d'éléments du site par exemple le logo Deezer ou tous les liens de bas de page
+Le pop-up de login est également légèrement différent. Le titre de l'onglet est en dessous du logo et le logo n'est pas exactement pareil. Les contours du formulaire sont également moins propres. Les icônes à côté du chemin de domaine ne sont pas présentes
+La plus grande différence est le fait que le pop up n'est pas un onglet à part entière, il est coincé dans le navigateur et ne peut en sortir.
 ```
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
-Réponse :
+Réponse : J'ai commencé par enregistrer la page de login avec un simple ctrl+s. Une fois cela fais, j'ai utilisé la même méthode pour enregistrer le formulaire.
+J'ai ensuite repris le template Windows-Chrome-DarkMode dans le repo bitb et j'ai changé les diverses variables comme indiqué deux points auparavant.
+J'ai alors inséré l'intégralité du div "window" dans la page de login, et j'ai modifié le bouton google sur cette page afin qu'il affiche cette fenêtre lors d'un click.
+Quelques modifications sur le css ont été appliquées afin que le formulaire soit bien une fenêtre pop-up et qu'elle s'affiche correctement.
 ```
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions :
+Conclusions : Il était très intéressant de voir comment spoofer un site web efficacement.
+Cette attaque peut être extrêment efficace. De plus en plus de sites proposent des systèmes d'authentification via des tiers, et c'est très utilisé pour éviter de créer un compte pour chaque service.
+Il est possible pour un utilisateur averti de s'apercevoir de la supercherie, mais au premier coup d'oeil le site semble tout à fait authentique. Le meilleur moyen restant certainement d'essayer de sortir le pop-up d'authentification du navigateur. 
 ```
 ---
 
