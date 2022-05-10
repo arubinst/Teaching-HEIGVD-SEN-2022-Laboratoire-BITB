@@ -112,7 +112,7 @@ Nous allons tenter de cloner la page de [login de Digitec](https://id.digitecgal
 ![Digitec Login Clone](images/digitec_login_clone.png)
 
 ---
-`
+
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
