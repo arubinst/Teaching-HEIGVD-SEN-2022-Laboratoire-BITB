@@ -104,7 +104,7 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.  
-Alors nous allons tenter de cloner la page de [login de Digitec](https://id.digitecgalaxus.ch/login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshau.digitec.ch%26redirect_uri%3Dhttps%253A%252F%252Fwww.digitec.ch%252Fauth%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520customerinfo%2520email%2520roles%2520custom.profile%2520offline_access%26code_challenge%3DgFydnD65Jl3LySfIkP2VHLLDstJTg62IA5Z15gtP7Ow%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D637878099630756125.MGIyMjA0MzMtY2JjOC00YzNmLTkxN2EtYjY2OTVlZjA5Nzc2NDkxYzRhNWItOGJjNS00ZTVhLTg5MWEtZWQyZTgwNDliYzEz%26acr_values%3Dtenant%253Adigitec.ch%2520_ga%253A184825687.1651088116%2520.cid%253A398abdf3-efd3-4e5b-9bdf-a2bb25b7a56d%26state%3DCfDJ8DKXc2aNgkZDqEP_yFBcnmG5XM1-IbjUmT4fX8uyFoBM05N8OVVylHfiQZ6c8pxedLXEdZUgTNvRjINthXq1paZpn90QbBD44nAvwxzqJio-tZkHgI9JzC-xypeSaz1T9olTHTmfAqh-8F4ycwIRfz-aF1bjfc9PYp8zmohtBpX6MMTizCzd2e1iAYwgHElNQ0_t1VtIYeMW_LWLmk89Uiu1xjwWPmJrXgcI-7tmoMk2yBTqgGfB5YzaWoOCnW6YbLY7NCq--essz7OlXjqL67rxg3BixEf7-llMKaoPPCBPtpXW5qKWbfmExLqddLiC17hK4y-fYLlVEDrwxa262pUOKS0Pcjuffrs8ByR71cw05QDlBZMeSxDYKppm1rZg5w).
+Nous allons tenter de cloner la page de [login de Digitec](https://id.digitecgalaxus.ch/login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshau.digitec.ch%26redirect_uri%3Dhttps%253A%252F%252Fwww.digitec.ch%252Fauth%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520customerinfo%2520email%2520roles%2520custom.profile%2520offline_access%26code_challenge%3DgFydnD65Jl3LySfIkP2VHLLDstJTg62IA5Z15gtP7Ow%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D637878099630756125.MGIyMjA0MzMtY2JjOC00YzNmLTkxN2EtYjY2OTVlZjA5Nzc2NDkxYzRhNWItOGJjNS00ZTVhLTg5MWEtZWQyZTgwNDliYzEz%26acr_values%3Dtenant%253Adigitec.ch%2520_ga%253A184825687.1651088116%2520.cid%253A398abdf3-efd3-4e5b-9bdf-a2bb25b7a56d%26state%3DCfDJ8DKXc2aNgkZDqEP_yFBcnmG5XM1-IbjUmT4fX8uyFoBM05N8OVVylHfiQZ6c8pxedLXEdZUgTNvRjINthXq1paZpn90QbBD44nAvwxzqJio-tZkHgI9JzC-xypeSaz1T9olTHTmfAqh-8F4ycwIRfz-aF1bjfc9PYp8zmohtBpX6MMTizCzd2e1iAYwgHElNQ0_t1VtIYeMW_LWLmk89Uiu1xjwWPmJrXgcI-7tmoMk2yBTqgGfB5YzaWoOCnW6YbLY7NCq--essz7OlXjqL67rxg3BixEf7-llMKaoPPCBPtpXW5qKWbfmExLqddLiC17hK4y-fYLlVEDrwxa262pUOKS0Pcjuffrs8ByR71cw05QDlBZMeSxDYKppm1rZg5w).  
 ![Digitec Login Original](images/digitec_login_original.png)
 ---
 
@@ -133,14 +133,13 @@ Réponse :
 - Bien évidemment les liens (ex. changement de langue) ne fonctionnent pas.
 - Les bordures. Avec BITB les bordures sont collés à l'HTML, ce qui pourrait indiquer à la cible que quelque chose ne tourne pas rond.
 - Le logo est pixelisé et tout moche des deux côtés, dont tout va bien.
-
 ```
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
-Réponse : J'ai simplement utilisé [Savetheweb2zip](https://saveweb2zip.com/en) . Si on compare cet outil avec d'autres outils en lignes, on remarque que celui-ci génère moins de fichiers pour un résultat correct. On note certains fichiers dont l'utilité est relativement obscure ([exemple1](BITB/MacOS-Chrome-DarkMode/clone/TAs)).
+Réponse : J'ai simplement utilisé https://saveweb2zip.com/en. Si on compare cet outil avec d'autres outils en lignes, on remarque que celui-ci génère moins de fichiers pour un résultat correct. On note certains fichiers dont l'utilité est relativement obscure ([exemple1](BITB/MacOS-Chrome-DarkMode/clone/TAs)).
 Les scripts js sont téléchargés ainsi que les fonts, ce qui rend l'expérience utilisateur plus proche du login original.
 Et le fichier [index.html](BITB/MacOS-Chrome-DarkMode/clone/index.html) est relativement bien construit. 
 ```
