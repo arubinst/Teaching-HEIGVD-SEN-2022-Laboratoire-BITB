@@ -120,7 +120,7 @@ Réponse :
 - **XX-TITLE-XX**: Digitec Login
 - **XX-DOMAIN-NAME-XX**: id.digitecgalaxus.ch
 - **XX-DOMAIN-PATH-XX**: https://id.digitecgalaxus.ch/login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshau.digitec.ch%26redirect_uri%3Dhttps%253A%252F%252Fwww.digitec.ch%252Fauth%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520customerinfo%2520email%2520roles%2520custom.profile%2520offline_access%26code_challenge%3DQgD9vz-E8K4ClD061YUuphtZQY_RS3ebPRZgwLgmj8M%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D637878103095376652.OWRjYmRmZTEtY2FjNC00NDNkLTlmNWUtOTNjMmQzODFhYWVlYjljZDBiYTEtYTI3NC00MmY0LTk2NTgtOGYzYWFjYTY4ZjI3%26acr_values%3Dtenant%253Adigitec.ch%2520_ga%253A184825687.1651088116%2520.cid%253A398abdf3-efd3-4e5b-9bdf-a2bb25b7a56d%26state%3DCfDJ8DKXc2aNgkZDqEP_yFBcnmFPtFCDRf_4TGguHQkIszlbzyhGqvU3EyTNWvEjd_5z1U1zTDUVcLekj3-ROJgXihMedq9DpxXSDixZBIL-ODc__OUTC_iCKLeHKYL_CyR7Zq6GM9Ms1Uy_wdm2bEYlte85Q2lLVTF7Zp0UvFnzoWssJwySyB27pyDrI14oD8x94lYhxxxkQLY9ykmX1JOMb67WMSPqQPzTc5V-k_IDUShBzaE-NeYVxktVbyz23wN9NvhiZA7jYzxtfa5KgxZlLDQGrS7tXIl6l3XjOgiUrJceEhPOJb-AEHpwfeSNAYbUd4JHCJLeK5stXpwsQwIRqRt1Kmi-c1i9G2DrpjdtX72v2gRG7NiIe7z6t6O2OtXqgg
-- **XX-PHISHING-LINK-XX**: `clone/index.html`
+- **XX-PHISHING-LINK-XX**: [clone/index.html](BITB/MacOS-Chrome-DarkMode/clone/index.html)
 ```
 
 ---
