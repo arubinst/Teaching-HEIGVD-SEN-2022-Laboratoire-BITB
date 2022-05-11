@@ -135,14 +135,14 @@ Réponse :
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
 ```
-Réponse : Les images de connexion avec un tier n'ont pas été clonée correctement, je pense qu'il faudrait les importer séparément. 
+Réponse : Les images de connexion avec un tier n'ont pas été clonée correctement, je pense qu'il faudrait les importer séparément. Je n'ai pas spoofé le logo de la page non plus.
 ```
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
-Réponse : J'ai utilisé gophish pour cloner la page. De manière assez simple, la procédure est disponible ci-dessous
+Réponse : J'ai utilisé gophish pour cloner la page. De manière assez simple, la procédure est disponible ci-dessous. 
 ```
 
 1- Lancez gophish et suivez la procédure de login décrite dans la doc
@@ -171,7 +171,7 @@ Réponse : J'ai utilisé gophish pour cloner la page. De manière assez simple, 
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions : Si j'avais voulu faire une vrai campagne valide où l'on ne peut pas dicerner le vrai site du faux, cela n'aurait pas nécessité une charge de travail excessive. Je trouve assez vertigineux à quel point c'est trivial. L'existence même d'outils aussi simple que Gophish pose un problème d'éthique évident à mon sens
+Conclusions : Si j'avais voulu faire une vrai campagne valide où l'on ne peut pas dicerner le vrai site du faux, cela n'aurait pas nécessité une charge de travail excessive. Je trouve assez vertigineux à quel point c'est trivial. L'existence même d'outils aussi simple que Gophish pose un problème d'éthique évident à mon sens.
 ```
 ---
 
