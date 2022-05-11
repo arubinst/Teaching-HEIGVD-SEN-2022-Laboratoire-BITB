@@ -76,6 +76,7 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+![Livrable](/images/Capturesen1.PNG)
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -104,14 +105,19 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
 ---
-
+![Livrable](/images/CAPTURE3.PNG)
 #### Livrable : Capture d'écran de votre version.
+![Livrable](/images/Capture2.PNG)
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
 Réponse :
+- XX-TITLE-XX - Twitter. C'est ce qu'il se passes / Twitter
+- XX-DOMAIN-NAME-XX - https://Twitter.com
+- XX-DOMAIN-PATH-XX - /i/flow/login
+- XX-PHISHING-LINK-XX - login.html
 ```
 
 ---
@@ -120,6 +126,7 @@ Réponse :
 
 ```
 Réponse :
+Oui clairmeent. En effet j'utilises une ancienne version de la page de login de twitter. Pourtant elle est très crédible et n'aurait aucun mal à tromper un utilisateur.
 ```
 
 ---
@@ -127,13 +134,14 @@ Réponse :
 
 ```
 Réponse :
+J'ai trouvé un repo github qui contiens un version clonée de la page de login de Twitter et ai donc utilisé ça (https://github.com/tjaartvanderWalt/live-coding-twitter-login-clone). J'ai rennomé le index.html en login.html et ai modifié le html pour qu'il prenne style2.css que j'ai aussi renommé. Finalement j'ai modifié a variable XX-PHISHING-LINK-XX pour qu'elle prenne login.html.
 ```
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions :
+Conclusions : C'est extrémement simple de faire ça, que ça soit avec un outil ou des ressources en ligne. Je trouve ça fou à quel point cela peut sembler légitime et je vois bien cette technique tromper des utilisateurs.
 ```
 ---
 
