@@ -76,6 +76,11 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+![image-20220508135154181](README.assets/image-20220508135154181.png)
+
+J'ai utilisé exactement la commande donnée, donc le template MacOS sous linux.
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,15 +108,26 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+![image-20220511121132842](README.assets/image-20220511121132842.png)Le site orignal que j'ai cloné (ce [lien](https://us.battle.net/login/en/?ref=https://oauth.battle.net/oauth/authorize?response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fwww.blizzard.com%252Fauth%252Fbnet%252Fcallback%26scope%3Dlogout%2520account.licenses%2520email%2520name%2520private_flags%2520primary-address%2520account.full%26client_id%3D3d87a4f120754e15840548b68d9ea4db&app=oauth))
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![image-20220511121007833](README.assets/image-20220511121007833.png)
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
 Réponse :
+- X-TITLE-XX: Battle.net Login
+- XX-DOMAIN-NAME-XX: us.battle.net
+- XX-DOMAIN-PATH-XX: /login/en/?ref=https://oauth.battle.net/oauth/authorize?response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fwww.blizzard.com%252Fauth%252Fbnet%252Fcallback%26scope%3Dlogout%2520account.licenses%2520email%2520name%2520private_flags%2520primary-address%2520account.full%26client_id%3D3d87a4f120754e15840548b68d9ea4db&app=oauth
+- XX-PHISHING-LINK-XX: le code source de la page 
+
 ```
 
 ---
@@ -119,21 +135,43 @@ Réponse :
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
 ```
-Réponse :
+Réponse : Les images de connexion avec un tier n'ont pas été clonée correctement, je pense qu'il faudrait les importer séparément. 
 ```
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
-Réponse :
+Réponse : J'ai utilisé gophish pour cloner la page. De manière assez simple, la procédure est disponible ci-dessous
 ```
 
+1- Lancez gophish et suivez la procédure de login décrite dans la doc
+
+2- Arrivé sur le dashboard, cliquez sur Landing page dans le menu à gauche
+
+![image-20220511121740600](README.assets/image-20220511121740600.png)
+
+3- Cliquez sur new page en dessous du titre
+
+![image-20220511121854399](README.assets/image-20220511121854399.png)
+
+4- Cliquez sur import site
+
+![image-20220511121926210](README.assets/image-20220511121926210.png)
+
+4- Copiez l'url de la page que vous voulez cloner ici et cliquez sur import![image-20220511122009529](README.assets/image-20220511122009529.png)
+
+5- Voilà ! Votre page est clonée, cliquez sur source (centre droite de l'image) pour copier le code source et le mettre dans le index.html
+
+![image-20220511122126745](README.assets/image-20220511122126745.png)
+
 ---
+
+
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions :
+Conclusions : Si j'avais voulu faire une vrai campagne valide où l'on ne peut pas dicerner le vrai site du faux, cela n'aurait pas nécessité une charge de travail excessive. Je trouve assez vertigineux à quel point c'est trivial. L'existence même d'outils aussi simple que Gophish pose un problème d'éthique évident à mon sens
 ```
 ---
 
