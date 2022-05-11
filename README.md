@@ -76,6 +76,9 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+![](images/first_bitb.png)
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,23 +106,51 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+![](images/authentic.png)
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![](images/fake.png)
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
 Réponse :
+- XX-TITLE-XX - Le titre de la fenêtre
+ => "Login | SwissPass"
+- XX-DOMAIN-NAME-XX - Le nom de domaine spoofé
+ => https://www.swisspass.ch/
+- XX-DOMAIN-PATH-XX - Le chemin (path) pour le domaine
+ => "oevlogin/login"
+- XX-PHISHING-LINK-XX - Le lien de phishing qui sera inséré dans votre fenêtre
+ => "Login | SwissPass.html", le page save as du site original
 ```
 
 ---
 
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
+![](images/dif.png)
+
 ```
 Réponse :
+Je suis sur linux, donc j'ai choisi Mac dark au hasard puisque le logiciel ne fait rien pour linux.
+
+1. Bouttons pour fermer, redimensionner la page pas les mêmes
+2. Pas d'onglets sur la nouvelle version
+3. Return et refresh non présents
+4. Bouclier, clé et étoile non présents
+5. Params et extensions non présents
+6. Scroll bar différentes
+7. Manque une flêche
+8. text E-mail-adress manquant
+9. text Password manquant
+10. tick non présent, mais la fonctionnalité fonctionne
 ```
 
 ---
@@ -127,13 +158,20 @@ Réponse :
 
 ```
 Réponse :
+
+J'ai simplement sauvegardé la page de login des cff (https://www.swisspass.ch/oevlogin/login), ce qui m'a donner un html se nommant "Login | SwissPass.html" avec un dossier pour le css, les images, etc.
+
+J'ai ajouter ce fichier html ainsi que le dossier dans le dossier MacOS-Chrome-DarkMode.
+
+J'ai indiqué au indiquer "Login | SwissPass.html" pour la variable XX-PHISHING-LINK-XX.
 ```
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions :
+Conclusions : Je pense que c'est un bon moyen de rapidement faire du physhing si on arrive à detecter l'os et le navigateur de la victime. Il aurait effectivement été préférable de le faire avec un site qui pop àgalement une fenêtre.
+Cependant, je pense que ça peut facilement faire l'affaire pour tromper les 20% que prédisent les statistiques.
 ```
 ---
 
