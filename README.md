@@ -76,6 +76,9 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+![image-20220510162254136](images/image1.png)
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,15 +106,25 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+![image-20220510162254136](images/image2.png)
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![image-20220510162254136](images/image3.png)
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
-Réponse :
+Réponse : 
+- XX-TITLE-XX         - Connexion : comptes Google - Google Chrome
+- XX-DOMAIN-NAME-XX   - accounts.google.com
+- XX-DOMAIN-PATH-XX   - /o/oauth2/auth/identifier?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.reddit.com%3Fid%3Dauth839033&response_type=permission%20id_token&scope=openid%20email&openid.realm&include_granted_scopes=true&prompt=select_account&client_id=705819728788-b2c1kcs7tst3b7ghv7at0hkqmtc68ckl.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fwww.reddit.com&fetch_basic_profile=false&gsiwebsdk=2&flowName=GeneralOAuthFlow
+- XX-PHISHING-LINK-XX - Connexion.html
 ```
 
 ---
@@ -120,6 +133,14 @@ Réponse :
 
 ```
 Réponse :
+
+Le logo de la fenêtre n'est pas le même, dans la fenêtre officielle il s'agit du logo reddit, dans la mienne il s'agit du logo google.
+
+Le texte en dessous du formulaire n'est également pas le même.
+
+Je n'ai pas configuré le bouton Apple, ni la fonction de login avec le formulaire.
+
+Les actions sur la page BITB sont bidons et ne fonctionnent pas.
 ```
 
 ---
@@ -127,6 +148,12 @@ Réponse :
 
 ```
 Réponse :
+
+Mes premières manipulations étaient d'enregistrer les pages de login de reddit (https://www.reddit.com/login/) ainsi que la page de connexion google qu'on obtient quand on clique sur le lien de connexion google (https://accounts.google.com/o/oauth2/auth/identifier?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.reddit.com%3Fid%3Dauth839033&response_type=permission%20id_token&scope=openid%20email&openid.realm&include_granted_scopes=true&prompt=select_account&client_id=705819728788-b2c1kcs7tst3b7ghv7at0hkqmtc68ckl.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fwww.reddit.com&fetch_basic_profile=false&gsiwebsdk=2&flowName=GeneralOAuthFlow)
+
+Ensuite j'ai modifié la page de login enregistrée afin de pouvoir afficher la BITB en me basant sur le template généré par le projet BITB.
+
+J'ai ensuite modifié le bouton de connexion google, pour que ce dernier affiche la fenêtre BITB
 ```
 
 ---
@@ -134,6 +161,12 @@ Réponse :
 
 ```
 Conclusions :
+
+J'aurais pensé que reproduire des sites webs serait plus simple, surtout en utilisant un outil comme SEToolKit, mais lorsque j'ai essayé de cloner Twitter, le clone était désordonné et pas du tout réussi.
+
+Je me suis alors rabattu sur une solution "a la mano" afin de copier le site web, je suis tomber sur le même problème. J'ai alors essayé, à nouveau manuellement, de copier le site web reddit. Ce qui a parfaitement fonctionné, j'ai alors directement continué sur cette solution.
+
+Malgré tout, mon clone bien que très bricolé est relativement senblable et suffisamment convaincant pour piéger un utilisateur non-avisé.
 ```
 ---
 
