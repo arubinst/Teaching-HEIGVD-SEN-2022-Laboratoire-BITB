@@ -76,6 +76,9 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+![Fenêtre basique BITB](images/rendu/winBITB.png)
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,15 +106,25 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+![Auth heig](images/rendu/GH-legit.png)
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![Auth heig](images/rendu/GH-moi.png)
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
 Réponse :
+- XX-TITLE-XX - GitHub
+- XX-DOMAIN-NAME-XX - https://github.com/
+- XX-DOMAIN-PATH-XX - login
+- XX-PHISHING-LINK-XX - tw.html
 ```
 
 ---
@@ -119,21 +132,21 @@ Réponse :
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
 ```
-Réponse :
+Réponse : le format de la fenêtre est différent, car il dépend du template utilisé.
 ```
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
-Réponse :
+Réponse : Depuis la page légitime: afficher les sources -> ctrl+a -> ctrl+c -> ctrl+v dans le fichier tw.html
 ```
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions :
+Conclusions : Cette attaque est très puissante, car il est difficile de faire la différence entre le sitre légitime et la copie. De plus les outils existant facilitent grandement la tâche.
 ```
 ---
 
