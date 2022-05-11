@@ -76,6 +76,9 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+![](./images/1.png)
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,15 +106,33 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+J'ai choisi LinkedIn
+
+![](./images/real.png)
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![](./images/false.png)
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
+![](./images/params.png)
+
 ```
-Réponse :
+Réponse : Pour les paramètre j'ai pris la pop-up réele et j'ai copié/collé les valeurs dans mes paramètres, ce qui me donne :
+
+XX-TITLE-XX : Sign in - Google Accounts - Mozilla Firefox
+XX-DOMAIN-NAME-XX : https://accounts.google.com
+XX-DOMAIN-PATH-XX : /o/oauth2/auth/oauthchooseaccount?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.linkedin.com%3Fid%3Dauth864192&response_type=permission id_token&scope=email profile openid ...
+
+On peut voire que mon Phishing Link montr Mozilla Firefox, je l'ai mis our ressembler le plus possible à la page que j'ai prise mais dans un vrai cas je l'enleverai pour que ça ne perturbe pas une cible utilisant un autre browser.
+
+Pour le path j'ai pris tous le chemin après le domaine. Comme je l'ai fait depuis mon browser déjà connecté il y a mes tokenIDs. 
 ```
 
 ---
@@ -119,21 +140,32 @@ Réponse :
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
 ```
-Réponse :
+Réponse : Il y a deux différences qui se remarquent.
+1. La barre n'est pas la même car j'utilise Linux alors que dans l'exemple j'utilise MacOS.
+2. La aprtie de login Google n'est pas correcte au niveau du front-end, il y a une sorte de marge, ça ne prend pas toute la fenêtre pop-up. C'est parce que je suis très mauvais en front-end et que le code que j'ai copié pour simuler le login est très compliqué également. J'ai essayé pas mal de temps mais sans succès.
 ```
 
 ---
-#### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
+#### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !!
 
-```
-Réponse :
-```
+Réponse : Afin de cloner le formulaire LinkedIn j'ai utilisé le logiciel gratuit HTTrack. Mais pour cloner le formulaire Google je n'ai pas réussi avec cet outil. J'ai alors fait à l'ancienne en récupérer le code source directement. Qui est d'ailleurs très compliqué, il est remplis de variables javascript sur environs 5000 lignes. J'ai réussi à supprimer certaines lignes de header pour avoir un affichage correcte. C'est pourquoi je pense que quand il faudra ajouter toutes les fonctionnalités du login afin de récupérer des credenciales, il est preferable de faire la page à la main.
+
+Quand je lançais la page, la pop-up apparaissait directement, j'ai alors juste changé son css avec "display=none". 
+
+![](./images/display_none.png)
+
+Ensuite sur le bouton "Sign in with Google" un événement qui change le display de la fenêtre. 
+
+![](./images/display_block.png)
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions :
+Conclusions : C'est une très bonne attaque qui peut marcher sur beaucoup de personnes. Cependant il faut que ça soit bien fait, j'ai eu déjà énormenent de peine à faire en sorte que ça ressemble le plus, après je suis vraiment pas bon en front-end. 
+Mais même avec ces galères j'ai quand même un Phishing Link qui ressemble à quelque chose qui pourrait tromper quelqu'un. 
+
+La partie logique de l'application peut aussi être compliqué à faire. Selon mon experience, sur LinkedIn c'est très facile, mais sur le login Google c'est sûrement beaucoup plus compliqué. 
 ```
 ---
 
