@@ -76,6 +76,7 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+![Fenêtre basique BITB](images/bitb_basic_1.png)
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,17 +104,23 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+![Amazon](images/amazon-origin.png)
 ---
 
 #### Livrable : Capture d'écran de votre version.
+![Amazon](images/amazon-fake.png)
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
-Réponse :
+Réponse : 
 ```
-
+Titre : Amazon
+Domain name : (vide ca donne mieux)
+Domain path : https://www.amazon.com/ap/signin
+XX-PHISHING-LINK-XX : amazon.html
 ---
 
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
@@ -121,20 +128,21 @@ Réponse :
 ```
 Réponse :
 ```
-
+Mis à part que c'est dans une fenêtre il n'y a pas beaucoup de différence. Le logo n'est pas le bon mais c'est parce que je ne l'ai pas changé.
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
 Réponse :
 ```
-
+Afficher le code source -> ctrl + c -> ctrl + v dans un fichier html
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
 Conclusions :
 ```
+On peut arriver à des choses très propres et très dur à détécter. Pour ce faire il ne faut pas ouvrir de nouvelle fenetre dans nos propres site. Cela permet d'indiquer à l'utilisateur que si c'est le cas ce n'est pas normal.
 ---
 
 ## Echeance
