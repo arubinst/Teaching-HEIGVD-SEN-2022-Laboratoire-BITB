@@ -1,5 +1,7 @@
 # Teaching-HEIGVD-SEN-2022-Laboratoire-BITB
 
+> Auteur: Noémie Plancherel
+
 
 ## Une petite note sur l'éthique
 
@@ -76,6 +78,9 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+![](images/1.png)
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,38 +108,64 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+![](images/2.png)
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![](images/3.png)
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
-```
-Réponse :
-```
+| Variables           | Valeurs                                                      |
+| ------------------- | ------------------------------------------------------------ |
+| XX-TITLE-XX         | `Sign-In - Google accounts`                                  |
+| XX-DOMAIN-NAME-XX   | `https://accounts.google.com`                                |
+| XX-DOMAIN-PATH-XX   | `/o/oauth2/auth/oauthchooseaccount?redirect_uri=storagerelay%3A%2F%2F...` |
+| XX-PHISHING-LINK-XX | `login_google.html`                                          |
 
----
+Le  fichier html du `XX-PHISHING-LINK-XX`est le code source de la page de connexion Google que j'ai directement téléchargée sur le navigateur.
+
+------
 
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
-```
-Réponse :
-```
+Premièrement le site original est en français car c'est la langue configurée de mon navigateur. Alors que sur le site cloné, la langue est en anglais car le code source que j'ai sélectionné est en anglais. Les langues ne sont pas configurables car l'interaction avec les composants de la fenêtre est possible mais aucun résultat n'est retourné ou aucune modification n'est effectuée.
+
+Sinon, au niveau de la fenêtre, sur le site cloné, la fenêtre de connexion Google n'est pas indépendante, ce n'est pas un pop-up qui s'ouvre indépendement.
+
+On voit également que la page de connexion du site cloné est à peine plus petite que l'originale. On pourrait faire les modifications en modifiant le CSS.
+
+Finalement, le visuel de la fenêtre ne correspond pas à l'OS de mon ordinateur qui est Linux. L'apparence est celle de MacOS.
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
-```
-Réponse :
-```
+Tout d'abord, afin de cloner la page `https://www.reddit.com/login/`, j'ai utilisé cet [outil](https://tool.minhclear.net/clonetemplate/) que j'ai trouvé en faisant des recherches. Il permet de télécharger et récupérer tout le code source d'un template d'un site. Le répertoire récupéré contient, entre autres, le css, les images et ce qui nous intéresse le plus le fichier `index.html`. On va pouvoir le modifier afin d'inclure toute l'attaque BITB et notre phishing link.
+
+La prochaine étape a été de cloner le formulaire de connexion de Google. Il n'était pas possible de réutiliser le même outil que pour le clone de la page de login Reddit car il y a des tokens inclus dans l'URL. Ainsi, j'ai tout simplement téléchargé le code source de la page. Il faut juste préciser que ce n'est pas possible de valider ses identifiants dans le formulaire car il manque les scripts de validation mais le visuel est le même que la page originale.
+
+Ensuite, il a fallu modifier le code source de la page afin d'y inclure l'attaque BITB. Voici les étapes importantes de la modification:
+
+- Suppression des éléments inutiles à notre "fausse" page; scripts, tracking, 2FA
+- Insertion des balises BITB (css, script, apparence)
+- Modification des variables BITB avec les valeurs indiquées précédemment
+
+Il a également fallu gérer et configurer l'ouverture de le fenêtre de connexion Google, pour cela j'ai effectué les modifications suivantes:
+
+- Ajout d'un événement `onclick` sur le bouton pour se connecter avec Google
+- Liaison de l'élément `window`, c'est-à-dire la fenêtre de connexion Google, avec l'événement afin de l'afficher lorsqu'on appuie sur le bouton via le DOM
+- Fixation de la page au premier plan en forcant le `z-index` à 0 et sa position en `absolute`
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
-```
-Conclusions :
-```
+Finalement, nous constatons que l'attaque BITB est très puissante si elle est bien implémentée. Or, afin que l'attaque fonctionne comme on le souhaiterait, il serait nécessaire de la combiner avec des outils qui permettraient de récupérer les credentials des utilisateurs. Car actuellement, l'attaque effectuée dans le laboratoire n'est pas très *utile* car on ne récupère rien.
+
 ---
 
 ## Echeance
