@@ -77,7 +77,7 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
 
-![image-20220510162254136](C:\Users\jean_\AppData\Roaming\Typora\typora-user-images\image-20220510162254136.png)
+![image-20220510162254136](images/image1.png)
 
 ---
 
@@ -107,13 +107,13 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
 
-![image-20220510222824702](C:\Users\jean_\AppData\Roaming\Typora\typora-user-images\image-20220510222824702.png)
+![image-20220510162254136](images/image2.png)
 
 ---
 
 #### Livrable : Capture d'écran de votre version.
 
-![image-20220511223149181](C:\Users\jean_\AppData\Roaming\Typora\typora-user-images\image-20220511223149181.png)
+![image-20220510162254136](images/image3.png)
 
 ---
 
