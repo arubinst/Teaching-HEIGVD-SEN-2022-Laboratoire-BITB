@@ -76,6 +76,9 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+![SEN_fenetre_flottante1](https://user-images.githubusercontent.com/79631500/167897872-bb21a188-a030-4e09-893b-038fdaced1ce.png)
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,15 +106,27 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+![SEN_vrai_facebook](https://user-images.githubusercontent.com/79631500/167926558-bc8b0152-4fa4-4566-9572-f504ed6509ff.png)
+
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![SEN_facebook](https://user-images.githubusercontent.com/79631500/167926590-d103e0f1-415d-4332-ab6a-88ad80d95543.png)
+
+
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
 Réponse :
+domain-name: www.facebook.com
+domain-path: /login.php?skip_api_login=1&api_key=2279744172273577&kid_directed_site=0&app_id=2279744172273577&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv7.0%2Fdialog%2Foauth%3Fresponse_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fpassporttest.mahjongsoul.com%252Fauth%252Ffacebook%252Fcallback%26client_id%3D2279744172273577%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D708444ef-8c27-47dd-80c7-89843fe1b63d%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fpassporttest.mahjongsoul.com%2Fauth%2Ffacebook%2Fcallback%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page&locale=fr_FR&pl_dbl=0
+
+logo-description: Facebook - login
 ```
 
 ---
@@ -120,6 +135,8 @@ Réponse :
 
 ```
 Réponse :
+ 
+La partie créer un nouveau compte en bas n'est pas présente. La taille de la fenêtre n'est pas la bonne et il n'est pas possible de la redimensionner ce qui rend l'affichage un peu différent.
 ```
 
 ---
@@ -127,6 +144,9 @@ Réponse :
 
 ```
 Réponse :
+clique droit -> afficher le code source -> copier coller dans un fichier html "facebook-form" à part.
+
+Changer la partie du index.html: <iframe id="content" src="facebook-form.html" frameBorder="0"></iframe>
 ```
 
 ---
@@ -134,7 +154,10 @@ Réponse :
 
 ```
 Conclusions :
+Une attaque efficace mais qui demande quelque compétence en site web pour être correctement intégré.
+Je n'ai personnelement pas réussi à intégré la pop up à un site cloné car le code était chaque fois trop complex et le css intégré ne permettait pas d'intégré la pop up correctement.
 ```
+
 ---
 
 ## Echeance
