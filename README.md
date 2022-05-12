@@ -161,33 +161,31 @@ Après réflexion, le choix de Metamask était une mauvaise idée car il s'intè
 
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
-```
-Réponse :
+
+**Réponse**
 L'extension Metamask ressemble bien à l'originale car les fichiers ont pu être copiés. Dans la version originale, le logo de Metamask (renard orange) se déplace en fonction de la souris ce qui n'est pas le cas ici.
 
 Néanmoins, l'ouverture via une extension s'intègre mal dans le template.
 Le site cloné cible (Rarible) n'a pas pu être ajouté au template, le code était incompréhensible (et mes  compétences en graphisme web sont vraiment nulles).
-```
 
 
 
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
-```
-Réponse :
+**Réponse :**
 Metamask étant une extension, il a été possible avec le debbuger d'ouvrir les fichiers, puis de copier le html ainsi que les fichiers.
 Pour Rarible, j'ai tenté la même technique mais le site est généré côté front-end dynamiquement avec du javascript, c'est plus compliqué de récupérer le code.
-```
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
-```
+**Réponse :**
+
 Personnellement, j'ai eu de la peine à utiliser le template. Je pense que partir de 0, en créant une page avec un bouton de login ressemblant à celui de Rarible aurait été plus simple et je l'aurais fait si j'avais eu le temps.
 Dans les nouvelles façons de réaliser des sites web, il y a beaucoup de contenu crées avec du Javascript, ce qui complique le clone de site web.
 
 L'extension metamask copié ressemble bien à l'originale alors que le graphisme n'est pas mon fort. En travaillant un peu plus dessus et en faisant appel à quelqu'un de compétent, il serait tout à fait possible de faire une copie conforme pouvant tromper un utilisateur peu regardant. Il faudrait néanmoins penser à détecter le navigateur de l'utilisateur pour présenter la version de l'extension correspondant au design de l'extension sur son navigateur.
-```
+
 ---
 
 ## Echeance
