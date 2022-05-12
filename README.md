@@ -76,6 +76,9 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+![bitb-first](./assets/bitb-first.PNG)
+
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,38 +106,92 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+**Rarible**
+
+Page de connexion Rarible avec le bouton pour se connecter avec Metamask : [https://rarible.com/connect]( https://rarible.com/connect).
+
+Rarible est une plateforme d'achat et de vente de jeton NFT, qui permet à ses utilisateurs de se connecter avec leur portefeuille Metamask (notre cible).
+
+![rarible-login](./assets/rarible-login.PNG)
+
+**Metamask**
+
+Version originale de l'extension Metamask. Elle s'installe directement sur le navigateur.
+
+<img src="./assets/metamask.PNG" alt="metamask" style="zoom:60%;" />
+
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
 ---
+
+**Extension metamask**
+
+![metamask-me](./assets/metamask-me.PNG)
+
+
+
+**Rarible**
+
+Ma tentative ratée de cloner Rarible. L'intégration dans le template n'a pas pu être réalisée car je ne comprenais rien au code s'y trouvant, Rarible utilise du javascript pour générer le code côté front-end.
+
+Fichier html : [rarible.html](rarible.html) 
+
+### ![rarible-clone](./assets/rarible-clone.PNG)
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
 Réponse :
+XX-TITLE-XX : Sign in with Metamask
+XX-DOMAIN-NAME-XX : Metamask Notification
+XX-Domain-Path-XX : laissé vide
+logo.svg => remplacé par le logo de metamask
+XX-PHIGHIN-LINK-XX => metamask.html
+
 ```
 
 ---
+
+Le fichier [MacOS-Chrome-LightMode/metamask.html](MacOS-Chrome-LightMode\metamask.html)  contient le code html de l'extension Metamask copié
+
+Après réflexion, le choix de Metamask était une mauvaise idée car il s'intègre mal avec le template de base et la plupart des attributs n'ont pas vraiment de sens.
 
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
-```
-Réponse :
-```
 
----
+**Réponse**
+L'extension Metamask ressemble bien à l'originale car les fichiers ont pu être copiés. Dans la version originale, le logo de Metamask (renard orange) se déplace en fonction de la souris ce qui n'est pas le cas ici.
+
+Néanmoins, l'ouverture via une extension s'intègre mal dans le template.
+Le site cloné cible (Rarible) n'a pas pu être ajouté au template, le code était incompréhensible (et mes  compétences en graphisme web sont vraiment nulles).
+
+
+
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
-```
-Réponse :
-```
+**Réponse :**
+Metamask étant une extension, on peut cliquer sur le bouton de connexion sur le site de Rarible, comme pour une utilisation normale, et lorsque l'extension Metamask s'ouvre, faire clique droit et cliquer sur "code source de la page". On a ainsi la page principale en html. Il faut également copier les fichiers javascript correspondant pour avoir l'ensemble du design.
+
+Ci-dessous, le code une fois le code source ouvert sous firefox.
+
+![extension](./assets/extension.PNG)
+
+
+Pour Rarible, j'ai tenté la même technique mais le site est généré côté front-end dynamiquement avec du javascript, c'est plus compliqué de récupérer le code.
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
-```
-Conclusions :
-```
+**Réponse :**
+
+Personnellement, j'ai eu de la peine à utiliser le template. Je pense que partir de 0, en créant une page avec un bouton de login ressemblant à celui de Rarible aurait été plus simple et je l'aurais fait si j'avais eu le temps.
+Dans les nouvelles façons de réaliser des sites web, il y a beaucoup de contenu crées avec du Javascript, ce qui complique le clone de site web.
+
+L'extension metamask copié ressemble bien à l'originale alors que le graphisme n'est pas mon fort. En travaillant un peu plus dessus et en faisant appel à quelqu'un de compétent, il serait tout à fait possible de faire une copie conforme pouvant tromper un utilisateur peu regardant. Il faudrait néanmoins penser à détecter le navigateur de l'utilisateur pour présenter la version de l'extension correspondant au design de l'extension sur son navigateur.
+
 ---
 
 ## Echeance
