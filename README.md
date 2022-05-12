@@ -173,7 +173,13 @@ Le site cloné cible (Rarible) n'a pas pu être ajouté au template, le code ét
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 **Réponse :**
-Metamask étant une extension, il a été possible avec le debbuger d'ouvrir les fichiers, puis de copier le html ainsi que les fichiers.
+Metamask étant une extension, on peut cliquer sur le bouton de connexion sur le site de Rarible, comme pour une utilisation normale, et lorsque l'extension Metamask s'ouvre, faire clique droit et cliquer sur "code source de la page". On a ainsi la page principale en html. Il faut également copier les fichiers javascript correspondant pour avoir l'ensemble du design.
+
+Ci-dessous, le code une fois le code source ouvert sous firefox.
+
+![extension](./assets/extension.PNG)
+
+
 Pour Rarible, j'ai tenté la même technique mais le site est généré côté front-end dynamiquement avec du javascript, c'est plus compliqué de récupérer le code.
 
 ---
