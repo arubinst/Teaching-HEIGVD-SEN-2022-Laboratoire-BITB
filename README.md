@@ -77,6 +77,7 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
 ---
+![](images/Capture.PNG)
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
 
@@ -104,36 +105,43 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
 ---
+![](images/Capture2.PNG)
+
 
 #### Livrable : Capture d'écran de votre version.
 ---
+![](images/Capture3.PNG)
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
 ```
 Réponse :
 ```
+- XX-TITLE-XX - Facebook - Connexion ou inscription
+- XX-DOMAIN-NAME-XX - https://www.facebook.com
+- XX-DOMAIN-PATH-XX - n/a
+- XX-PHISHING-LINK-XX -  n/a
 
 ---
 
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
 ```
-Réponse :
+Réponse : Le formattage du champ pour les mots de passe est mal "imprimé" dans la page
 ```
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
 ```
-Réponse :
+Réponse : J'ai simplement utilisé les outils de développement (F12) et j'ai copié le code source de la page
 ```
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
 ```
-Conclusions :
+Conclusions : Pour que la technique soit mieux executée, il faudrait peut être utilisé un autre outil car copié tel quel le code source de la page, ne "render" pas forcément la page correctement.
 ```
 ---
 
