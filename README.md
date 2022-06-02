@@ -76,6 +76,8 @@ Voici ce que j’obtiens comme résultat. Cette fenêtre est "flottante"; je peu
 
 ---
 #### Livrable : Capture d'écran de votre première fenêtre de BITB
+
+![enfin lâ c'te fenêtre](images/bitb-macos.png)
 ---
 
 Cette fenêtre est une manière assez utile de comprendre tout de suite les paramètres à configurer. Ces éléments sont facilement identifiables puisqu'ils prennent la forme ```XX-ELEMENT-A-CONFIGURER-XX```. Chacun de ces éléments correspond à une variable dans le fichier ```index.html``` de chaque répertoire (pour les différentes versions). Les variables à éditer sont donc les suivantes :
@@ -103,38 +105,206 @@ Evidement, ce travail peut être combiné avec des outils comme [Gophish](https:
 
 ---
 #### Livrable : Capture d'écran du site légitime que vous avez cloné.
+
+![real github login page](images/real-github.png)
 ---
 
 #### Livrable : Capture d'écran de votre version.
+
+![real github login page](images/not-real-github.png)
 ---
 
 #### Question : quels sont les valeurs que vous avez attribués aux différentes variables ?
 
-```
-Réponse :
-```
+<table>
+<tr>
+<th>Variable</th>
+<th>Valeur</th>
+<th>Remarque</th>
+</tr>
+<tr>
+<td>XX-TITLE-XX</td>
+<td>Sign in to GitHub</td>
+<td>Comme il s'agit de la page de login de GitHub, je n'avais pas forcément d'idée plus pertinente que de rajouter le même titre que la page.</td>
+</tr>
+<tr>
+<td>XX-DOMAIN-NAME-XX</td>
+<td>https://github.com</td>
+<td></td>
+</tr>
+<tr>
+<td>XX-DOMAIN-PATH-XX</td>
+<td>/login</td>
+<td></td>
+<tr>
+<td>XX-PHISHING-LINK-XX</td>
+<td>github-login.html</td>
+<td>Il m'a fallut un petit moment pour comprendre qu'on pouvait simplement rajouter une page html entière comme lien dans l'attribut `src` de la balise `iframe`.</td>
+</tr>
+</table>
 
 ---
 
 #### Question : Y-a-t'il des différences remarquables entre le site original et votre version ? Si oui, lesquelles ?
 
-```
-Réponse :
-```
+À priori, non, on n'arrive pas à distinguer la différence entre les deux sites
+d'un premier coup d'œil. Si on décide de s'attarder sur des détails comme la
+police, on peut apercevoir une légère différence de luminosité et la forme qui
+n'est pas exactement pareil. Mais ceci peut être dû soit à la manière avec
+laquelle est rendue l'`iframe`, soit la taille entre le site de base et le BITB.
 
 ---
 #### Question : quel outil ou méthode avez-vous employé pour cloner le formulaire qui s'affiche sur votre fenêtre ? Comment avez-vous procédé ? Donnez-nous le plus grand nombre de détails possibles !
 
+##### Recherche d'un outils
+
+Après de longues recherches et concertation avec des anciens potes de cours,
+j'ai finalement pu découvrir un website scraper open source
+[website-scraper-puppeteer](https://github.com/website-scraper/website-scraper-puppeteer),
+un plugin pour
+[website-scraper](https://github.com/website-scraper/node-website-scraper) qui
+permet de prendre en charge des sites dynamiques.
+
+##### Installation
+
+Donc dans un premier temps, il a fallu mettre à jour nodejs et npm. Puis, lancer la commande
+
+```bash
+npm install website-scraper website-scraper-puppeteer
 ```
-Réponse :
+
+##### Recherche d'un site
+
+Comme je voulais faire quelque chose que j'ai considéré comme particulier, je
+voulais faire la page de TikTok, mais j'ai assez vite déchanté quand j'ai vu
+l'état du fichier `index.html` qui semble avoir subit une compilation le rendant
+par conséquent difficilement lisible.
+
+J'ai bien tenté de commencer à mettre les choses en place, mais confronté à
+cette horreur (excuser moi du peu), j'ai plus ou moins abandonné l'idée car le
+travail aurait été bien trop conséquent pour le rendu final.
+
+![oh god why](images/ohnowhy.png)
+
+Mais pour un travail plus avancer avec une version où on devrait récupérer les
+credentials entrés par l'utilisateur, c'est une page de choix à recopier (même
+si on y trouve toutes sortes d'expert, aussi en physique qu'en informatique,
+donc pas tout le monde tomberait dans le panneau).
+
+Je me suis donc rabattu sur GitHub, qui était bien plus simple à mettre en
+place, mais je n'ai malheureusement pas réussi à trouver une page qui fait appel
+à un `OAuth` de GitHub, donc il y a simplement la page de login dans la fenêtre.
+
+##### Utilisation
+
+J'ai directement utilisé l'exemple fourni sur le repo GitHub de
+website-scraper-puppeteer en changeant la variable `urls` et `directory` et j'ai
+enregistré dans un fichier sobrement nommé `index.js`.
+
+```js
+import scrape from 'website-scraper';
+import PuppeteerPlugin from 'website-scraper-puppeteer';
+
+await scrape({
+    urls: ['https://github.com/login'],
+    directory: 'github',
+    plugins: [ 
+      new PuppeteerPlugin({
+        launchOptions: { headless: false }, /* optional */
+        scrollToBottom: { timeout: 10000, viewportN: 10 }, /* optional */
+        blockNavigation: true, /* optional */
+      })
+    ]
+});
 ```
+
+et ensuite de lancé
+
+```bash
+node index.js
+```
+
+pour être agressé par une erreur de nodejs
+
+```bash
+(node:4262) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+/home/{user}/dev/node/scrapper/index.js:1
+import {scrape} from 'website-scraper';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+
+
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1033:15)
+    at Module._compile (node:internal/modules/cjs/loader:1069:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Module._load (node:internal/modules/cjs/loader:827:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
+
+Node.js v18.2.0
+```
+
+Donc il fallait encore créer un fichier `package.json` avec pour contenu 
+
+```json
+{
+    "type": "module"
+}
+```
+
+et de relancer l'exécution pour être accueilli par
+
+```bash
+reject(new Errors_js_1.TimeoutError(`Timed out after ${timeout} ms while trying to connect to the browser! Only Chrome at revision r${preferredRevision} is guaranteed to work.`));
+                   ^
+
+TimeoutError: Timed out after 30000 ms while trying to connect to the browser! Only Chrome at revision r982053 is guaranteed to work.
+```
+
+Moi qui pensait que ça serait plus simple, il a donc fallu que j'installe une
+version de Google Chrome dans ma distribution Linux
+
+```bash
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt -f install
+```
+
+pour installer le paquet et ses dépendances. Et le plus drôle, c'est que quand
+website-scraper-puppeteer est lancé en « headless », il n'a même pas utilisé
+Google Chrome, mais Chromium que j'avais déjà d'installé[^1].
+
+[^1]: Quelle indignité…
+
+Mais pour finir, ceci a téléchargé (apparemment) le contenu de la page Web qu'on
+peut voir dans l'image ci-dessous.
+
+![github login page](images/github-login-content.png)
+
+Il ne restait donc plus qu'à intégrer la page de login dans l'`iframe` et le
+tour était joué[^2].
+
+[^2]: Pfiou, c'était long et pas pour les bonnes raisons.
 
 ---
 #### Pour finir, partagez avec nous vos conclusions.
 
-```
-Conclusions :
-```
+À force de regarder des vidéos du YouTubers
+[Sandoz](https://www.youtube.com/c/Sandozprod), où on voit des broutteurs[^3]
+profiter de la faiblesse des moins avertis, je me rends compte qu'une attaque du
+genre, surtout avec quelqu'un d'inexpérimenté, pourrait faire de sérieux dégât,
+et peut-être même mener au sui*ide de la victime.
+
+[^3]: C'est ainsi que sont désignés les arnaqueurs.
+
+Elle constitue donc, si la personne décide d'aller au bout des choses, de copier
+au pixel près les pages de login, et concevoir un vrai site Web derrière cette
+page, une stratégie tout à fait viable pour toutes personnes qui voudrait voler
+aux gens (ou autre action légalement répréhensible).
+
 ---
 
 ## Echeance
